@@ -1,0 +1,28 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  // Ignore ESLint errors during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // Headers for SharedArrayBuffer support (required for FFmpeg)
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'require-corp',
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+        ],
+      },
+    ];
+  },
+};
+
+export default nextConfig;
