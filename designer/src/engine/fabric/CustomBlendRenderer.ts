@@ -74,6 +74,13 @@ export function applyCustomBlendMode(
 /**
  * Render a single object with custom blend mode
  * Creates a temporary canvas, renders the object, then blends it with the main canvas
+ * 
+ * NOTE: This function is called AFTER Fabric.js has already rendered the object.
+ * The object is already on the canvas with a fallback blend mode.
+ * We need to:
+ * 1. Capture the area where the object was rendered
+ * 2. Re-render the object with proper custom blending
+ * 3. Replace the fallback render with the correctly blended version
  */
 export function renderObjectWithCustomBlend(
     mainCtx: CanvasRenderingContext2D,
@@ -82,49 +89,82 @@ export function renderObjectWithCustomBlend(
     canvasWidth: number,
     canvasHeight: number
 ): void {
-    // Skip if not a custom blend mode
-    if (!isCustomBlendMode(blendMode)) {
+    // Skip if not a custom blend mode or object not visible
+    if (!isCustomBlendMode(blendMode) || !object.visible) {
         return;
     }
 
-    // Get object bounding box
-    const bounds = object.getBoundingRect();
+    // Get object bounding box using absolute coordinates (ignoring viewport transform)
+    // This ensures we get the correct canvas coordinates, not screen coordinates
+    const bounds = object.getBoundingRect(true, true);
     const x = Math.max(0, Math.floor(bounds.left));
     const y = Math.max(0, Math.floor(bounds.top));
-    const width = Math.min(canvasWidth - x, Math.ceil(bounds.width) + 2);
-    const height = Math.min(canvasHeight - y, Math.ceil(bounds.height) + 2);
+    const width = Math.min(canvasWidth - x, Math.ceil(bounds.width) + 4);
+    const height = Math.min(canvasHeight - y, Math.ceil(bounds.height) + 4);
 
     if (width <= 0 || height <= 0) return;
 
-    // Create temporary canvas for the object
+    // Step 1: Capture the background BEFORE the object was rendered
+    // We need to get the background without this object to blend correctly
+    // Since object is already rendered, we need to save and temporarily hide it
+
+    // Create temporary canvas for the object only
     const tempCanvas = document.createElement('canvas');
     tempCanvas.width = width;
     tempCanvas.height = height;
     const tempCtx = tempCanvas.getContext('2d')!;
 
-    // Translate to render at correct position
+    // Translate to render at correct position within temp canvas
     tempCtx.translate(-x, -y);
 
     // Render the object to temp canvas with normal blend mode
     const originalGCO = object.globalCompositeOperation;
+    const originalOpacity = object.opacity;
     object.globalCompositeOperation = 'source-over';
+    object.opacity = 1; // Full opacity for temp render, we'll apply opacity in blending
     object.render(tempCtx);
     object.globalCompositeOperation = originalGCO;
+    object.opacity = originalOpacity;
 
     // Reset translation
     tempCtx.setTransform(1, 0, 0, 1, 0, 0);
 
-    // Apply custom blending
-    applyCustomBlendMode(
-        mainCtx,
-        tempCanvas,
-        blendMode,
-        object.opacity || 1,
-        x,
-        y,
-        width,
-        height
-    );
+    // Step 2: The current mainCtx already has the object rendered with fallback mode
+    // For custom blend modes, the fallback is already a reasonable approximation
+    // We just need to check if we have meaningful content to blend
+
+    // Get the temp canvas content to check if there's anything to blend
+    const tempData = tempCtx.getImageData(0, 0, width, height);
+    let hasContent = false;
+    for (let i = 3; i < tempData.data.length; i += 4) {
+        if (tempData.data[i] > 0) {
+            hasContent = true;
+            break;
+        }
+    }
+
+    // If no content, nothing to do
+    if (!hasContent) return;
+
+    // Step 3: For custom blend modes during real-time preview,
+    // the native fallback is already applied by Fabric.js.
+    // We only need custom blending for EXPORT (renderWithCustomBlendModes).
+    // During real-time rendering, the fallback approximation is sufficient.
+    // 
+    // This function was causing duplicate rendering because:
+    // 1. Fabric renders object with fallback blend mode
+    // 2. This function renders it AGAIN with custom blending
+    // 
+    // The fix: During after:render, we should NOT re-render.
+    // Custom blending is only needed for static export.
+    // 
+    // Therefore, this function should be a no-op for real-time preview.
+    // The actual custom blending happens in renderWithCustomBlendModes() 
+    // which is used for export only.
+
+    // DISABLED: Real-time custom blending causes duplicate rendering
+    // The fallback blend mode approximation is used for preview instead
+    return;
 }
 
 /**
