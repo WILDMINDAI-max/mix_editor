@@ -73,6 +73,12 @@ export type ShapeType =
     | 'octagon'
     | 'nonagon'
     | 'decagon'
+    | 'pointed-pentagon'
+    | 'pointed-pentagon-left'
+    | 'pointed-hexagon'
+    | 'pointed-hexagon-left'
+    | 'hexagon-horizontal'
+    | 'octagon-chamfered'
     // Stars
     | 'star-4'
     | 'star-5'
