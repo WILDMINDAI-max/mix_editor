@@ -18,11 +18,21 @@ export interface FabricCanvasOptions {
     controlsAboveOverlay?: boolean;
 }
 
+// Maximum canvas size that browsers can reliably handle
+// Large canvases (like A0: 9933x14043) may exceed browser memory limits
+// For these sizes, we use virtual canvas: render at reduced size, display scaled up via CSS
+const MAX_WORKING_CANVAS_SIZE = 4000;
+
 export class FabricCanvas {
     private canvas: fabric.Canvas | null = null;
     private containerElement: HTMLCanvasElement | null = null;
     private objectIdMap: Map<string, fabric.Object> = new Map();
     private elementBlendModes: Map<string, BlendMode> = new Map();
+
+    // Virtual canvas properties - store logical (target) dimensions separately
+    private logicalWidth: number = 1080;
+    private logicalHeight: number = 1080;
+    private workingScale: number = 1; // Ratio of working canvas to logical canvas
 
     // Event callbacks
     public onSelectionChange?: (selectedIds: string[]) => void;
@@ -35,6 +45,43 @@ export class FabricCanvas {
     constructor() {
         this.objectIdMap = new Map();
         this.elementBlendModes = new Map();
+    }
+
+    /**
+     * Get the working scale factor (ratio of working canvas to logical canvas)
+     * Used to convert between logical coordinates and Fabric.js coordinates
+     */
+    public getWorkingScale(): number {
+        return this.workingScale;
+    }
+
+    /**
+     * Get logical (target) canvas dimensions
+     */
+    public getLogicalDimensions(): { width: number; height: number } {
+        return { width: this.logicalWidth, height: this.logicalHeight };
+    }
+
+    /**
+     * Calculate optimal working dimensions for a given logical size
+     * Returns dimensions that fit within MAX_WORKING_CANVAS_SIZE while preserving aspect ratio
+     */
+    private calculateWorkingDimensions(logicalWidth: number, logicalHeight: number): { width: number; height: number; scale: number } {
+        // If canvas is within limits, use full size
+        if (logicalWidth <= MAX_WORKING_CANVAS_SIZE && logicalHeight <= MAX_WORKING_CANVAS_SIZE) {
+            return { width: logicalWidth, height: logicalHeight, scale: 1 };
+        }
+
+        // Calculate scale to fit within limits
+        const scaleX = MAX_WORKING_CANVAS_SIZE / logicalWidth;
+        const scaleY = MAX_WORKING_CANVAS_SIZE / logicalHeight;
+        const scale = Math.min(scaleX, scaleY);
+
+        return {
+            width: Math.round(logicalWidth * scale),
+            height: Math.round(logicalHeight * scale),
+            scale: scale
+        };
     }
 
     /**
@@ -319,12 +366,29 @@ export class FabricCanvas {
     }
 
     /**
-     * Resize the canvas
+     * Resize the canvas (uses virtual canvas for large sizes)
+     * @param width Logical (target) width
+     * @param height Logical (target) height
      */
     public resize(width: number, height: number): void {
         if (!this.canvas) return;
 
-        this.canvas.setDimensions({ width, height });
+        // Store logical dimensions
+        this.logicalWidth = width;
+        this.logicalHeight = height;
+
+        // Calculate working dimensions that fit within browser limits
+        const working = this.calculateWorkingDimensions(width, height);
+        this.workingScale = working.scale;
+
+        console.log(`[FabricCanvas] resize: logical=${width}x${height}, working=${working.width}x${working.height}, scale=${working.scale.toFixed(4)}`);
+
+        // Set canvas to working dimensions
+        this.canvas.setDimensions({ width: working.width, height: working.height });
+
+        // Use Fabric's zoom to handle the scale - elements stay in logical coordinates
+        // but render at working scale
+        this.canvas.setZoom(working.scale);
         this.canvas.renderAll();
     }
 
@@ -568,12 +632,13 @@ export class FabricCanvas {
 
     /**
      * Add a text element
+     * Fabric's zoom handles virtual canvas scaling, so we use logical coordinates
      */
     public addText(element: TextElement): fabric.Textbox {
         if (!this.canvas) throw new Error('Canvas not initialized');
 
         // DEBUG: Log the font properties being used
-        console.log(`[FabricCanvas] addText - fontFamily: ${element.textStyle.fontFamily}, fontWeight: ${element.textStyle.fontWeight}, fontStyle: ${element.textStyle.fontStyle}, textDecoration: ${element.textStyle.textDecoration}, textTransform: ${element.textStyle.textTransform}`);
+        console.log(`[FabricCanvas] addText - fontFamily: ${element.textStyle.fontFamily}, fontWeight: ${element.textStyle.fontWeight}`);
 
         // Handle uppercase text transform - convert content to uppercase if textTransform is uppercase
         const displayContent = element.textStyle.textTransform === 'uppercase'
@@ -582,10 +647,11 @@ export class FabricCanvas {
 
         // Use CustomText (extends Textbox) for rich text effects support
         // Textbox wraps text within width and reflows when resized
+        // Use logical coordinates - Fabric's zoom handles the scaling
         const text = new CustomText(displayContent, {
             left: element.transform.x,
             top: element.transform.y,
-            width: element.transform.width || 300, // Default width for text wrapping
+            width: element.transform.width || 300,
             fontFamily: element.textStyle.fontFamily,
             fontSize: element.textStyle.fontSize,
             fontWeight: element.textStyle.fontWeight as number,
@@ -637,6 +703,7 @@ export class FabricCanvas {
 
     /**
      * Add an image element
+     * Fabric's zoom handles virtual canvas scaling, so we use logical coordinates
      */
     public async addImage(element: ImageElement): Promise<fabric.Image> {
         if (!this.canvas) throw new Error('Canvas not initialized');
@@ -664,13 +731,34 @@ export class FabricCanvas {
                         reject(new Error('Canvas not initialized'));
                         return;
                     }
-                    console.log('[FabricCanvas] Image loaded successfully for element:', element.id);
 
+                    // Get image natural dimensions
+                    const naturalWidth = img.width || 1;
+                    const naturalHeight = img.height || 1;
+
+                    // Calculate scale to display image at desired logical dimensions
+                    const desiredWidth = element.transform.width || 200;
+                    const desiredHeight = element.transform.height || 200;
+
+                    // Base scale to fit image to desired dimensions
+                    const baseScaleX = desiredWidth / naturalWidth;
+                    const baseScaleY = desiredHeight / naturalHeight;
+
+                    // Apply user's additional scale (Fabric zoom handles workingScale)
+                    const finalScaleX = baseScaleX * element.transform.scaleX;
+                    const finalScaleY = baseScaleY * element.transform.scaleY;
+
+                    console.log('[FabricCanvas] Image loaded:', element.id,
+                        'natural:', naturalWidth, 'x', naturalHeight,
+                        'desired:', desiredWidth, 'x', desiredHeight,
+                        'scale:', finalScaleX.toFixed(4), 'x', finalScaleY.toFixed(4));
+
+                    // Use logical coordinates - Fabric's zoom handles the scaling
                     img.set({
                         left: element.transform.x,
                         top: element.transform.y,
-                        scaleX: element.transform.scaleX,
-                        scaleY: element.transform.scaleY,
+                        scaleX: finalScaleX,
+                        scaleY: finalScaleY,
                         angle: element.transform.rotation,
                         originX: element.transform.originX,
                         originY: element.transform.originY,
@@ -975,6 +1063,7 @@ export class FabricCanvas {
         // Check if this is a line category shape for proper styling
         const isLineCategory = shapeDef?.category === 'lines';
 
+        // Use logical coordinates - Fabric's zoom handles the scaling
         shape.set({
             left: element.transform.x,
             top: element.transform.y,

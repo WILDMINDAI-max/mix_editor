@@ -103,6 +103,8 @@ export function CanvasStage({ className }: CanvasStageProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [isInitialized, setIsInitialized] = useState(false);
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+    // Track workingScale to force re-render when canvas is resized
+    const [workingScaleState, setWorkingScaleState] = useState(1);
 
     const activePage = useActivePage();
     const zoom = useEditorStore((state) => state.zoom);
@@ -199,21 +201,17 @@ export function CanvasStage({ className }: CanvasStageProps) {
             const element = activePage.elements.find(el => el.id === id);
             if (!element) return;
 
+            // Fabric's zoom handles virtual canvas scaling, so coordinates are already in logical space
             // Update element in store with new transform values
-            // We use updatePage directly to avoid circular updates if we used canvasStore.updateTransform
-            // (since updateTransform also tries to update fabric object)
             const updatedElements = activePage.elements.map(el => {
                 if (el.id === id) {
-                    // For Textbox (text elements), we also need to sync width since Textbox
-                    // changes width when resized, not scaleX/scaleY
-                    const newWidth = fabricObject.width ?? el.transform.width;
-                    const newHeight = fabricObject.height ?? el.transform.height;
+                    // Get displayed dimensions from Fabric (visual size)
+                    const fabricVisualWidth = fabricObject.getScaledWidth ? fabricObject.getScaledWidth() : (fabricObject.width || 1) * (fabricObject.scaleX || 1);
+                    const fabricVisualHeight = fabricObject.getScaledHeight ? fabricObject.getScaledHeight() : (fabricObject.height || 1) * (fabricObject.scaleY || 1);
 
-                    // Calculate absolute transform values (handle grouping/ActiveSelection)
+                    // Calculate position
                     let x = fabricObject.left ?? el.transform.x;
                     let y = fabricObject.top ?? el.transform.y;
-                    let scaleX = fabricObject.scaleX ?? el.transform.scaleX;
-                    let scaleY = fabricObject.scaleY ?? el.transform.scaleY;
                     let rotation = fabricObject.angle ?? el.transform.rotation;
 
                     // If object is in a group (ActiveSelection), calculate absolute coordinates
@@ -222,9 +220,18 @@ export function CanvasStage({ className }: CanvasStageProps) {
                         const options = fabric.util.qrDecompose(matrix);
                         x = options.translateX;
                         y = options.translateY;
-                        scaleX = options.scaleX;
-                        scaleY = options.scaleY;
                         rotation = options.angle;
+                    }
+
+                    // For images, store visual size in width/height and keep scaleX/scaleY at 1
+                    // For text elements, preserve the scaleX/scaleY
+                    let newScaleX = el.transform.scaleX;
+                    let newScaleY = el.transform.scaleY;
+
+                    if (el.type !== 'text') {
+                        // For non-text elements, visual size IS the width/height
+                        newScaleX = 1;
+                        newScaleY = 1;
                     }
 
                     // Base update for all element types
@@ -234,10 +241,10 @@ export function CanvasStage({ className }: CanvasStageProps) {
                             ...el.transform,
                             x,
                             y,
-                            width: newWidth,
-                            height: newHeight,
-                            scaleX,
-                            scaleY,
+                            width: fabricVisualWidth,
+                            height: fabricVisualHeight,
+                            scaleX: newScaleX,
+                            scaleY: newScaleY,
                             rotation,
                         }
                     };
@@ -308,7 +315,10 @@ export function CanvasStage({ className }: CanvasStageProps) {
         if (!isInitialized || !activePage) return;
 
         const fabricCanvas = getFabricCanvas();
-        fabricCanvas.loadPage(activePage);
+        fabricCanvas.loadPage(activePage).then(() => {
+            // Update workingScale state after page is loaded to trigger re-render
+            setWorkingScaleState(fabricCanvas.getWorkingScale());
+        });
     }, [activePage?.id, activePage?.width, activePage?.height, isInitialized]);
 
     // Update background immediately when it changes (for real-time gradient updates)
@@ -374,11 +384,24 @@ export function CanvasStage({ className }: CanvasStageProps) {
     // }, [zoom, isInitialized]);
 
     // Calculate displayed canvas dimensions
-    const displayScale = zoom / 100;
-    const canvasWidth = activePage?.width || 1080;
-    const canvasHeight = activePage?.height || 1080;
-    const displayWidth = canvasWidth * displayScale;
-    const displayHeight = canvasHeight * displayScale;
+    // For virtual canvas, we need to account for workingScale
+    const logicalWidth = activePage?.width || 1080;
+    const logicalHeight = activePage?.height || 1080;
+
+    // Use workingScale from state (updated after loadPage completes)
+    // This ensures React re-renders with correct dimensions after resize
+    const workingScale = workingScaleState;
+    const workingWidth = logicalWidth * workingScale;
+    const workingHeight = logicalHeight * workingScale;
+
+    // Combined display scale = user zoom * 1 (the canvas is already at working size)
+    // We want the visual size to be based on logical dimensions at user zoom
+    const userZoom = zoom / 100;
+    // Scale from working dimensions to logical display size
+    const displayWidth = logicalWidth * userZoom;
+    const displayHeight = logicalHeight * userZoom;
+    // CSS transform scale to apply to the working canvas to match display size
+    const cssScale = displayWidth / workingWidth;
 
     return (
         <div
@@ -403,9 +426,9 @@ export function CanvasStage({ className }: CanvasStageProps) {
                 >
                     <div
                         style={{
-                            width: canvasWidth,
-                            height: canvasHeight,
-                            transform: `scale(${displayScale})`,
+                            width: workingWidth,
+                            height: workingHeight,
+                            transform: `scale(${cssScale})`,
                             transformOrigin: 'top left',
                         }}
                     >
@@ -419,7 +442,7 @@ export function CanvasStage({ className }: CanvasStageProps) {
                     />
 
                     {/* Lock Icon Overlays for locked elements */}
-                    <LockIconOverlay displayScale={displayScale} />
+                    <LockIconOverlay displayScale={userZoom} />
                 </div>
             </div>
         </div>
