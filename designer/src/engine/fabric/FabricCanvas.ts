@@ -8,6 +8,7 @@ import { CustomText } from './CustomText';
 import { SHAPE_CATALOG } from '@/types/shapes';
 import { getCanvasBlendMode, isCustomBlendMode } from './BlendModes';
 import { applyCustomBlendModesToCanvas } from './CustomBlendRenderer';
+import { SmartGuides, initSmartGuides, disposeSmartGuides } from './SmartGuides';
 
 export interface FabricCanvasOptions {
     width: number;
@@ -28,6 +29,10 @@ export class FabricCanvas {
     private containerElement: HTMLCanvasElement | null = null;
     private objectIdMap: Map<string, fabric.Object> = new Map();
     private elementBlendModes: Map<string, BlendMode> = new Map();
+
+    // Smart guides for alignment and snapping
+    private smartGuides: SmartGuides | null = null;
+    private snapToGuidesEnabled: boolean = true;
 
     // Virtual canvas properties - store logical (target) dimensions separately
     private logicalWidth: number = 1080;
@@ -106,11 +111,19 @@ export class FabricCanvas {
         this.setupEventListeners();
         this.setupCustomControls();
 
-        // Add after:render hook for custom blend modes
+        // Initialize smart guides for alignment and snapping
+        this.smartGuides = initSmartGuides(this.canvas, { snapThreshold: 8 });
+
+        // Add after:render hook for custom blend modes and smart guides
         // This applies pixel-level blending for modes not supported by Canvas 2D API
         this.canvas.on('after:render', () => {
             if (this.elementBlendModes.size > 0 && this.canvas) {
                 applyCustomBlendModesToCanvas(this.canvas, this.elementBlendModes);
+            }
+            // Render smart guides overlay
+            if (this.smartGuides && this.canvas) {
+                const ctx = this.canvas.getContext();
+                this.smartGuides.renderGuides(ctx);
             }
         });
 
@@ -121,6 +134,10 @@ export class FabricCanvas {
      * Dispose of the canvas and clean up resources
      */
     public dispose(): void {
+        // Dispose smart guides
+        disposeSmartGuides();
+        this.smartGuides = null;
+
         if (this.canvas) {
             this.canvas.dispose();
             this.canvas = null;
@@ -128,6 +145,16 @@ export class FabricCanvas {
         this.objectIdMap.clear();
         this.elementBlendModes.clear();
         this.containerElement = null;
+    }
+
+    /**
+     * Enable or disable snap-to-guides functionality
+     */
+    public setSnapToGuides(enabled: boolean): void {
+        this.snapToGuidesEnabled = enabled;
+        if (this.smartGuides) {
+            this.smartGuides.setEnabled(enabled);
+        }
     }
 
     /**
@@ -189,7 +216,41 @@ export class FabricCanvas {
 
         this.canvas.on('object:scaling', onUpdating);
         this.canvas.on('object:rotating', onUpdating);
-        this.canvas.on('object:moving', onUpdating);
+
+        // Object moving with smart guides snapping
+        this.canvas.on('object:moving', (e: fabric.IEvent<MouseEvent>) => {
+            const obj = e.target as fabric.Object & { data?: { id: string } };
+            if (!obj) return;
+
+            // Call regular updating callback
+            if (obj.data?.id) {
+                this.onObjectUpdating?.(obj.data.id);
+            }
+
+            // Apply smart guides snapping
+            if (this.smartGuides && this.snapToGuidesEnabled) {
+                const snapResult = this.smartGuides.calculateSnap(obj);
+
+                // Apply snapping if alignments found
+                if (snapResult.snapX !== null) {
+                    obj.set('left', snapResult.snapX);
+                }
+                if (snapResult.snapY !== null) {
+                    obj.set('top', snapResult.snapY);
+                }
+
+                // Request re-render to show guide lines
+                this.canvas?.requestRenderAll();
+            }
+        });
+
+        // Clear guides when object modification ends
+        this.canvas.on('mouse:up', () => {
+            if (this.smartGuides) {
+                this.smartGuides.clearGuides();
+                this.canvas?.requestRenderAll();
+            }
+        });
 
         this.canvas.on('object:added', (e: fabric.IEvent<MouseEvent>) => {
             const obj = e.target as fabric.Object & { data?: { id: string } };

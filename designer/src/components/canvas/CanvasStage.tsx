@@ -110,6 +110,7 @@ export function CanvasStage({ className }: CanvasStageProps) {
     const zoom = useEditorStore((state) => state.zoom);
     const setZoom = useEditorStore((state) => state.setZoom);
     const fitTrigger = useEditorStore((state) => state.fitTrigger);
+    const snapToGuides = useEditorStore((state) => state.snapToGuides);
     const select = useCanvasStore((state) => state.select);
     const deselect = useCanvasStore((state) => state.deselect);
 
@@ -153,6 +154,51 @@ export function CanvasStage({ className }: CanvasStageProps) {
 
         return () => resizeObserver.disconnect();
     }, []);
+
+    // Handle wheel/trackpad pinch-zoom for canvas zoom control
+    // This prevents browser zoom and instead zooms only the canvas
+    useEffect(() => {
+        const container = containerRef.current;
+        if (!container) return;
+
+        const handleWheel = (e: WheelEvent) => {
+            // Check if this is a pinch-zoom gesture (ctrlKey is true for trackpad pinch)
+            // or a regular scroll with Ctrl held
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Calculate zoom change based on deltaY
+                // Negative deltaY = zoom in, positive deltaY = zoom out
+                const zoomSensitivity = 0.5; // Adjust sensitivity as needed
+                const delta = -e.deltaY * zoomSensitivity;
+
+                // Get current zoom and calculate new zoom
+                const currentZoom = useEditorStore.getState().zoom;
+                const newZoom = Math.max(5, Math.min(500, currentZoom + delta));
+
+                // Update zoom (passing false to indicate manual zoom, not fit)
+                setZoom(newZoom, false);
+            }
+        };
+
+        // Use passive: false to allow preventDefault on wheel events
+        container.addEventListener('wheel', handleWheel, { passive: false });
+
+        // Also prevent default on the document when hovering over canvas area
+        // This catches cases where the event might bubble
+        const handleDocumentWheel = (e: WheelEvent) => {
+            if ((e.ctrlKey || e.metaKey) && container.contains(e.target as Node)) {
+                e.preventDefault();
+            }
+        };
+        document.addEventListener('wheel', handleDocumentWheel, { passive: false });
+
+        return () => {
+            container.removeEventListener('wheel', handleWheel);
+            document.removeEventListener('wheel', handleDocumentWheel);
+        };
+    }, [setZoom]);
 
     // Auto-fit zoom when page dimensions change or Fit button is clicked
     useEffect(() => {
@@ -373,6 +419,13 @@ export function CanvasStage({ className }: CanvasStageProps) {
             fabricCanvas.render();
         }
     }, [activePage?.elements, isInitialized]);
+
+    // Sync snapToGuides setting from store to FabricCanvas
+    useEffect(() => {
+        if (!isInitialized) return;
+        const fabricCanvas = getFabricCanvas();
+        fabricCanvas.setSnapToGuides(snapToGuides);
+    }, [snapToGuides, isInitialized]);
 
     // Note: Visual zoom is handled by CSS transform on the wrapper div
     // Fabric.js setZoom would cause double-scaling, so we don't use it
