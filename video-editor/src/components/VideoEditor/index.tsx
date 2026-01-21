@@ -376,7 +376,12 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
     // --- Derived State ---
     const mainTrack = tracks.find(t => t.id === 'main-video');
     const mainTrackDuration = mainTrack?.items.reduce((max, item) => Math.max(max, item.start + item.duration), 0) || 0;
-    const totalDuration = mainTrackDuration > 0 ? mainTrackDuration : 5;
+    // Calculate total duration across ALL tracks (overlays, audio, main video)
+    const allTracksDuration = tracks.reduce((max, track) => {
+        const trackEnd = track.items.reduce((m, item) => Math.max(m, item.start + item.duration), 0);
+        return Math.max(max, trackEnd);
+    }, 0);
+    const totalDuration = allTracksDuration > 0 ? allTracksDuration : 5;
 
     // Helper to get selected item object
     const selectedItem = useMemo(() => {
@@ -734,7 +739,12 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
                 }
                 return track;
             });
-            return newTracks;
+
+            // Clean up empty overlay tracks (don't remove main or audio)
+            return newTracks.filter(t => {
+                if (t.id === 'main-video' || t.id === 'audio') return true;
+                return t.items.length > 0;
+            });
         });
 
         // Update selection to new track/item
@@ -811,17 +821,17 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
             if (item.isBackground) {
                 // Detach: Create new Overlay Track
                 const newTrackId = `track-${Date.now()}`;
+                // Set width to 40%, height will be auto-calculated based on aspect ratio
                 const newItem: TimelineItem = {
                     ...item,
                     trackId: newTrackId,
                     isBackground: false,
-                    width: 50,
-                    height: undefined,
+                    width: 40,
+                    height: undefined, // Let auto-height calculation handle this based on aspect ratio
                     x: 0,
                     y: 0,
                     layer: 10
                 };
-
                 const newTrack: Track = {
                     id: newTrackId,
                     type: 'overlay',
@@ -1103,6 +1113,72 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
                     return newTracks;
                 });
             }
+        }
+    };
+
+    // Handle files dropped from system (Windows Explorer)
+    const handleDropFiles = async (trackId: string, time: number, files: FileList) => {
+        const targetTrack = tracks.find(t => t.id === trackId);
+        if (!targetTrack) return;
+
+        let currentDropTime = time;
+
+        for (const file of Array.from(files)) {
+            const url = URL.createObjectURL(file);
+            const fileType = file.type.startsWith('image/') ? 'image'
+                : file.type.startsWith('video/') ? 'video'
+                    : file.type.startsWith('audio/') ? 'audio'
+                        : null;
+
+            if (!fileType) continue;
+
+            let thumbnail: string | undefined;
+            let duration = 5; // Default for images
+            let durationStr: string | undefined;
+
+            // Process based on file type
+            if (fileType === 'video') {
+                try {
+                    const result = await generateVideoThumbnail(file);
+                    thumbnail = result.thumbnail;
+                    duration = result.duration;
+                    durationStr = formatDuration(result.duration);
+                } catch (err) {
+                    console.error('Failed to generate video thumbnail', err);
+                }
+            } else if (fileType === 'audio') {
+                try {
+                    duration = await getAudioDuration(file);
+                    durationStr = formatDuration(duration);
+                } catch (err) {
+                    console.error('Failed to get audio duration', err);
+                }
+            }
+
+            // Add to uploads panel
+            setUploads(prev => [{
+                id: Math.random().toString(36).substr(2, 9),
+                type: fileType,
+                src: url,
+                name: file.name,
+                thumbnail,
+                duration: durationStr
+            }, ...prev]);
+
+            // Create timeline item data
+            const itemData = {
+                type: fileType,
+                src: url,
+                name: file.name,
+                thumbnail,
+                duration
+            };
+
+            // Drop the clip using existing handler
+            handleDropClip(trackId, currentDropTime, itemData);
+
+            // Offset next file's drop time
+            currentDropTime += duration;
         }
     };
 
@@ -1528,6 +1604,7 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
                                 onDetach={handleDetachBackground}
                                 onMoveClip={handleMoveClip}
                                 onDropClip={handleDropClip}
+                                onDropFiles={handleDropFiles}
                                 onClipDragEnd={handleClipDragEnd}
                             />
                         </div>

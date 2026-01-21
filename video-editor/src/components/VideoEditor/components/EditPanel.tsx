@@ -645,17 +645,29 @@ const EditPanel = ({
                 </button>
             </div>
 
-            {/* Scale */}
-            <div className={`space-y-2 mb-3 ${itemToRender?.isBackground ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
+            {/* Scale - Width & Height */}
+            <div className="space-y-2 mb-3">
                 <div className="space-y-1">
                     <div className="flex justify-between text-xs text-gray-600">
-                        <span>Scale</span>
+                        <span>Width</span>
                         <span className="font-mono text-[10px] bg-gray-100 px-1.5 py-0.5 rounded">{Math.round(itemToRender?.width || 100)}%</span>
                     </div>
                     <input
                         type="range" min="10" max="200"
                         value={itemToRender?.width || 100}
-                        onChange={(e) => itemToRender && onUpdate({ ...itemToRender, width: Number(e.target.value), height: Number(e.target.value) })}
+                        onChange={(e) => itemToRender && onUpdate({ ...itemToRender, width: Number(e.target.value) })}
+                        className="w-full accent-violet-600 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                </div>
+                <div className="space-y-1">
+                    <div className="flex justify-between text-xs text-gray-600">
+                        <span>Height</span>
+                        <span className="font-mono text-[10px] bg-gray-100 px-1.5 py-0.5 rounded">{Math.round(itemToRender?.height || 100)}%</span>
+                    </div>
+                    <input
+                        type="range" min="10" max="200"
+                        value={itemToRender?.height || 100}
+                        onChange={(e) => itemToRender && onUpdate({ ...itemToRender, height: Number(e.target.value) })}
                         className="w-full accent-violet-600 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                 </div>
@@ -678,7 +690,7 @@ const EditPanel = ({
             </div>
 
             {/* Position */}
-            <div className={`grid grid-cols-2 gap-2 mb-3 ${itemToRender?.isBackground ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
+            <div className="grid grid-cols-2 gap-2 mb-3">
                 <div className="space-y-1">
                     <label className="text-[10px] font-bold text-gray-400 uppercase">Position X</label>
                     <div className="relative">
@@ -816,7 +828,7 @@ const EditPanel = ({
                 <h3 className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Alignment</h3>
             </div>
 
-            <div className={`grid grid-cols-6 gap-1.5 mb-4 ${itemToRender?.isBackground ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
+            <div className="grid grid-cols-6 gap-1.5 mb-4">
                 <button onClick={() => onAlign && onAlign('left')} className="p-2 bg-white border border-gray-100 rounded-lg flex items-center justify-center hover:border-violet-300 hover:text-violet-600 text-gray-600 transition-all" title="Align Left">
                     <AlignLeft size={16} />
                 </button>
