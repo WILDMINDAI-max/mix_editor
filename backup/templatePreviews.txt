@@ -1,0 +1,646 @@
+﻿                                        {template.id === 'price-list-1' ? (
+                                            // Price List Preview
+                                            <>
+                                                <div className="w-full bg-[#2D4A3E] py-2 px-2 relative">
+                                                    <div className="absolute left-1.5 top-1.5 w-3 h-3 bg-[#C9A962] rotate-45 opacity-80"></div>
+                                                    <p className="text-white text-[9px] font-bold text-center tracking-[2px] font-serif">PRICE LIST</p>
+                                                    <p className="text-[#C9A962] text-[4px] font-medium text-center tracking-[1px] whitespace-nowrap">LUXURY SPA & WELLNESS</p>
+                                                </div>
+                                                <div className="w-[90%] h-[1px] bg-[#C9A962] mx-auto mt-1"></div>
+                                                <div className="flex-1 px-2 py-1 overflow-hidden">
+                                                    <p className="text-[#2D4A3E] text-[5px] font-semibold text-center tracking-[1px] mb-1">MASSAGE THERAPY</p>
+                                                    <div className="space-y-[1px] mb-1">
+                                                        <div className="flex justify-between px-1">
+                                                            <span className="text-[4px] text-gray-600">Swedish Massage</span>
+                                                            <span className="text-[4px] text-[#2D4A3E] font-semibold">$85</span>
+                                                        </div>
+                                                        <div className="flex justify-between px-1">
+                                                            <span className="text-[4px] text-gray-600">Deep Tissue</span>
+                                                            <span className="text-[4px] text-[#2D4A3E] font-semibold">$95</span>
+                                                        </div>
+                                                        <div className="flex justify-between px-1">
+                                                            <span className="text-[4px] text-gray-600">Hot Stone</span>
+                                                            <span className="text-[4px] text-[#2D4A3E] font-semibold">$120</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-[85%] h-[0.5px] bg-[#C9A962] mx-auto mb-1"></div>
+                                                    <p className="text-[#2D4A3E] text-[5px] font-semibold text-center tracking-[1px] mb-0.5">FACIAL</p>
+                                                    <div className="space-y-[1px]">
+                                                        <div className="flex justify-between px-1">
+                                                            <span className="text-[4px] text-gray-600">Classic Facial</span>
+                                                            <span className="text-[4px] text-[#2D4A3E] font-semibold">$75</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ) : template.id === 'pricing-table-1' ? (
+                                            // Pricing Table Preview - Premium Dark Theme
+                                            <div className="flex-1 flex items-center justify-center gap-[3px] p-2 bg-gradient-to-b from-[#0F0F23] to-[#1a1a2e]">
+                                                {/* Starter Card */}
+                                                <div className="w-[30%] h-[55%] bg-[#1E1E3F]/90 rounded-sm flex flex-col items-center justify-center px-1 py-1" style={{ boxShadow: '0 0 4px rgba(59,130,246,0.3)', border: '1px solid #3B82F6' }}>
+                                                    <p className="text-white/90 text-[4px] font-medium mb-0.5">STARTER</p>
+                                                    <p className="text-[#3B82F6] text-[8px] font-bold leading-none">$0</p>
+                                                </div>
+                                                {/* PRO Card - Featured */}
+                                                <div className="w-[34%] h-[70%] bg-[#1E1E3F] rounded-sm flex flex-col items-center justify-center px-1 py-1" style={{ boxShadow: '0 0 8px rgba(139,92,246,0.4)', border: '2px solid #8B5CF6' }}>
+                                                    <p className="text-[#A855F7] text-[3px] font-bold">â˜… POPULAR</p>
+                                                    <p className="text-white text-[4px] font-medium">PRO</p>
+                                                    <p className="text-[#A855F7] text-[10px] font-bold leading-none">$49</p>
+                                                </div>
+                                                {/* Enterprise Card */}
+                                                <div className="w-[30%] h-[55%] bg-[#1E1E3F]/90 rounded-sm flex flex-col items-center justify-center px-1 py-1" style={{ boxShadow: '0 0 4px rgba(249,115,22,0.3)', border: '1px solid #F97316' }}>
+                                                    <p className="text-white/90 text-[3px] font-medium mb-0.5">ENTERPRISE</p>
+                                                    <p className="text-[#F97316] text-[8px] font-bold leading-none">$149</p>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'doctor-profile-1' ? (
+                                            // Doctor Profile Preview - Modern Teal Design
+                                            <div className="flex-1 flex flex-col overflow-hidden bg-[#F8FAFC]">
+                                                {/* Teal Header */}
+                                                <div className="w-full h-[45%] bg-[#0D9488] flex flex-col items-center justify-center relative">
+                                                    {/* Empty Photo Circle */}
+                                                    <div className="w-10 h-10 rounded-full bg-white border-2 border-[#0D9488]"></div>
+                                                </div>
+                                                {/* Doctor Name & Specialty */}
+                                                <div className="px-2 py-1 text-center bg-[#F8FAFC]">
+                                                    <p className="font-bold text-[5px] text-gray-800">Name</p>
+                                                    <p className="text-[#0D9488] text-[3px]">Orthopedic Surgeon</p>
+                                                </div>
+                                                {/* Stats Row */}
+                                                <div className="flex justify-around px-1 py-1 bg-white border-y border-gray-200">
+                                                    <div className="text-center">
+                                                        <p className="text-[#0D9488] text-[5px] font-bold">15+</p>
+                                                        <p className="text-gray-500 text-[2px]">Years</p>
+                                                    </div>
+                                                    <div className="text-center">
+                                                        <p className="text-[#0D9488] text-[5px] font-bold">5000+</p>
+                                                        <p className="text-gray-500 text-[2px]">Patients</p>
+                                                    </div>
+                                                    <div className="text-center">
+                                                        <p className="text-[#0D9488] text-[5px] font-bold">4.9</p>
+                                                        <p className="text-gray-500 text-[2px]">Rating</p>
+                                                    </div>
+                                                </div>
+                                                {/* CTA Button */}
+                                                <div className="flex-1 flex items-center justify-center px-2">
+                                                    <div className="bg-[#0D9488] px-3 py-1 rounded">
+                                                        <p className="text-white text-[3px] font-medium">Book Appointment</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'food-blog-1' ? (
+                                            // Food Blog Preview
+                                            <div className="flex-1 relative overflow-hidden">
+                                                {/* Food background image */}
+                                                <div
+                                                    className="absolute inset-0 bg-cover bg-center"
+                                                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=60)' }}
+                                                />
+                                                {/* Overlay */}
+                                                <div className="absolute inset-x-0 top-1/4 h-[40%] bg-[#9CF3DF]/50" />
+                                                {/* Text Content */}
+                                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                                    <p className="text-white text-[12px] font-normal" style={{ fontFamily: 'cursive', textShadow: '1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }}>Welcome</p>
+                                                    <p className="text-black text-[8px] font-bold mt-0.5" style={{ fontFamily: 'cursive' }}>OUR FOOD BLOG</p>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'cardio-fitness-1' ? (
+                                            // Cardio Fitness Preview
+                                            <div className="flex-1 relative overflow-hidden">
+                                                {/* Workout background image (grayscale) */}
+                                                <div
+                                                    className="absolute inset-0 bg-cover bg-center grayscale"
+                                                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=200&q=60)' }}
+                                                />
+                                                {/* Golden hexagon overlay */}
+                                                <div className="absolute left-0 top-0 bottom-0 w-[40%]">
+                                                    <svg viewBox="0 0 100 100" className="h-full w-full" preserveAspectRatio="none">
+                                                        <path d="M 0 0 L 70 0 L 100 50 L 70 100 L 0 100 L 20 50 Z" fill="#C4AD1E" opacity="0.9" />
+                                                    </svg>
+                                                </div>
+                                                {/* Text Content */}
+                                                <div className="absolute left-1 top-2 text-left">
+                                                    <div className="bg-white px-1 py-0.5 inline-block">
+                                                        <p className="text-black text-[4px] font-bold">10 MINUTES FITNESS</p>
+                                                    </div>
+                                                    <p className="text-white text-[14px] font-black mt-0.5 leading-none">CARDIO</p>
+                                                    <p className="text-white text-[4px] mt-0.5">EXERCISE FOR BEGINNER</p>
+                                                </div>
+                                                {/* Subscribe button */}
+                                                <div className="absolute right-1 bottom-1 bg-[#C4AD1E] px-1 py-0.5">
+                                                    <p className="text-white text-[3px]">WATCH & SUBSCRIBE</p>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'tech-startup-pitch' ? (
+                                            // Tech Startup Pitch Preview
+                                            <div className="flex-1 relative overflow-hidden" style={{ background: 'linear-gradient(45deg, #667EEA, #764BA2)' }}>
+                                                {/* Decorative circles */}
+                                                <div className="absolute right-1 top-1 w-4 h-4 rounded-full bg-white/10"></div>
+                                                <div className="absolute left-1 bottom-1 w-5 h-5 rounded-full bg-white/10"></div>
+                                                {/* Content */}
+                                                <div className="absolute left-1.5 top-2">
+                                                    <p className="text-white text-[10px] font-bold tracking-wide">NEXAFLOW</p>
+                                                    <p className="text-white/80 text-[4px] mt-0.5">AI-Powered Workflow</p>
+                                                </div>
+                                                {/* Stats boxes */}
+                                                <div className="absolute left-1.5 bottom-3 flex gap-1">
+                                                    <div className="bg-white/15 rounded px-1 py-0.5">
+                                                        <p className="text-white text-[6px] font-bold">$50M+</p>
+                                                        <p className="text-white/70 text-[3px]">Funding</p>
+                                                    </div>
+                                                    <div className="bg-white/15 rounded px-1 py-0.5">
+                                                        <p className="text-white text-[6px] font-bold">500K+</p>
+                                                        <p className="text-white/70 text-[3px]">Users</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'lifestyle-quote' ? (
+                                            // Lifestyle Quote Preview
+                                            <div className="flex-1 relative overflow-hidden flex items-center justify-center" style={{ background: 'radial-gradient(circle at center, #FED9B7, #F07167)' }}>
+                                                {/* Decorative quote mark */}
+                                                <div className="absolute left-1 top-0 text-white/20 text-[28px] font-serif leading-none">"</div>
+                                                {/* Quote content */}
+                                                <div className="flex flex-col items-center px-2 mt-2">
+                                                    <p className="text-white text-[5px] italic text-center leading-tight font-serif">The only way to do great work is to love what you do.</p>
+                                                    <div className="w-4 h-[1px] bg-white/60 my-1"></div>
+                                                    <p className="text-white/80 text-[4px]">â€” Steve Jobs</p>
+                                                </div>
+                                                {/* Hashtags */}
+                                                <p className="absolute bottom-1 text-white/60 text-[3px]">#motivation</p>
+                                            </div>
+
+                                        ) : template.id === 'cyber-monday-1' ? (
+                                            // Cyber Monday Preview - Landscape
+                                            <div className="flex-1 flex items-center justify-center bg-[#09090B]">
+                                                <div className="w-[95%] aspect-video relative overflow-hidden bg-[#09090B] border border-[#22D3EE]/30 shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                                                    {/* Glow */}
+                                                    <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(34,211,238,0.15), transparent 70%)' }}></div>
+                                                    {/* Text */}
+                                                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                                        <p className="text-[#EC4899] text-[10px] font-black leading-none drop-shadow-[0_0_2px_rgba(236,72,153,0.5)]" style={{ fontFamily: 'Inter' }}>CYBER</p>
+                                                        <p className="text-white text-[10px] font-black leading-none mt-[-1px]" style={{ fontFamily: 'Inter' }}>MONDAY</p>
+                                                        {/* Discount */}
+                                                        <div className="mt-1.5 bg-[#FACC15] -rotate-2 px-1 shadow-[1px_1px_0_rgba(0,0,0,1)]">
+                                                            <p className="text-black text-[3px] font-bold" style={{ fontFamily: 'Inter' }}>UP TO 70% OFF</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'art-exhibit-1' ? (
+                                            // Art Exhibit Preview - Square
+                                            <div className="flex-1 flex items-center justify-center bg-gray-50">
+                                                <div className="w-[90%] aspect-square relative overflow-hidden bg-[#F3F4F6] shadow-sm border border-gray-200">
+                                                    {/* Shapes */}
+                                                    <div className="absolute -right-2 top-2 w-12 h-12 rounded-full bg-[#EF4444]"></div>
+                                                    <div className="absolute left-2 bottom-6 w-8 h-16 bg-black"></div>
+                                                    {/* Image */}
+                                                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] h-[55%] border-2 border-white shadow-sm overflow-hidden">
+                                                        <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=200&q=60" className="w-full h-full object-cover grayscale contrast-125" alt="Art" />
+                                                    </div>
+                                                    {/* Text */}
+                                                    <div className="absolute bottom-1 w-full text-center">
+                                                        <p className="text-black text-[6px] leading-none" style={{ fontFamily: 'Playfair Display' }}>MODERN</p>
+                                                        <p className="text-black text-[6px] leading-none" style={{ fontFamily: 'Playfair Display' }}>ABSTRACT</p>
+                                                        <p className="text-black/60 text-[3px] mt-0.5 tracking-widest font-sans">JULY 20 - AUG 30</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'party-event-neon' ? (
+                                            // Party Event Neon Preview
+                                            <div className="flex-1 relative overflow-hidden" style={{ background: 'radial-gradient(circle at center, #1a0a2e, #0d1b2a, #0a0a12)' }}>
+                                                {/* Decorative glow circles */}
+                                                <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-[#FF1493]/20" />
+                                                <div className="absolute right-1 top-4 w-5 h-5 rounded-full bg-[#00BFFF]/15" />
+                                                <div className="absolute left-1 bottom-4 w-7 h-7 rounded-full bg-[#8A2BE2]/20" />
+                                                {/* Full neon frame */}
+                                                <div className="absolute top-1 left-1.5 right-1.5 h-[1px] bg-white" style={{ boxShadow: '0 0 6px 2px #00BFFF, 0 0 12px 4px #00BFFF' }} />
+                                                <div className="absolute bottom-1 left-1.5 right-1.5 h-[1px] bg-white" style={{ boxShadow: '0 0 6px 2px #00BFFF, 0 0 12px 4px #00BFFF' }} />
+                                                <div className="absolute top-1 bottom-1 left-1.5 w-[1px] bg-white" style={{ boxShadow: '0 0 6px 2px #00BFFF, 0 0 12px 4px #00BFFF' }} />
+                                                <div className="absolute top-1 bottom-1 right-1.5 w-[1px] bg-white" style={{ boxShadow: '0 0 6px 2px #00BFFF, 0 0 12px 4px #00BFFF' }} />
+                                                {/* Text */}
+                                                <div className="absolute inset-0 flex flex-col items-center justify-center px-1">
+                                                    <p className="text-[#FFD700] text-[3px] tracking-wider">â˜… EXCLUSIVE EVENT â˜…</p>
+                                                    <p className="text-white text-[5px] tracking-wider mt-0.5" style={{ fontFamily: 'serif' }}>BHAILU'S</p>
+                                                    <p className="text-[#FF6B9D] text-[2px] tracking-widest">PRESENTS</p>
+                                                    <p className="text-white text-[8px] font-black mt-0.5 leading-none" style={{ textShadow: '0 0 8px #00BFFF' }}>THE BIG BANG</p>
+                                                    <p className="text-white text-[11px] font-black tracking-[2px] leading-none" style={{ textShadow: '0 0 10px #FF1493' }}>PARTY</p>
+                                                    <p className="text-[#FFD700] text-[3px] font-bold mt-0.5">âœ¨ SECURE YOUR SPOT âœ¨</p>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'certificate-achievement-1' ? (
+                                            // Certificate of Achievement Preview - Elegant Navy & Gold
+                                            <div className="flex-1 relative overflow-hidden bg-[#FDFBF7]">
+                                                {/* Outer border */}
+                                                <div className="absolute inset-[2px] border-2 border-[#1E3A5F]" />
+                                                {/* Inner border */}
+                                                <div className="absolute inset-[5px] border border-[#C9A227]" />
+                                                {/* Corner ornaments */}
+                                                <div className="absolute top-[2px] left-[2px] w-2 h-2 rounded-full bg-[#C9A227] flex items-center justify-center">
+                                                    <div className="w-1 h-1 rounded-full bg-[#1E3A5F]" />
+                                                </div>
+                                                <div className="absolute top-[2px] right-[2px] w-2 h-2 rounded-full bg-[#C9A227] flex items-center justify-center">
+                                                    <div className="w-1 h-1 rounded-full bg-[#1E3A5F]" />
+                                                </div>
+                                                <div className="absolute bottom-[2px] left-[2px] w-2 h-2 rounded-full bg-[#C9A227] flex items-center justify-center">
+                                                    <div className="w-1 h-1 rounded-full bg-[#1E3A5F]" />
+                                                </div>
+                                                <div className="absolute bottom-[2px] right-[2px] w-2 h-2 rounded-full bg-[#C9A227] flex items-center justify-center">
+                                                    <div className="w-1 h-1 rounded-full bg-[#1E3A5F]" />
+                                                </div>
+                                                {/* Header ribbon */}
+                                                <div className="absolute top-2 left-1/2 -translate-x-1/2 bg-[#1E3A5F] px-2 py-[1px]">
+                                                    <p className="text-[#C9A227] text-[2px]">âœ¦ OFFICIAL âœ¦</p>
+                                                </div>
+                                                {/* Content */}
+                                                <div className="absolute inset-0 flex flex-col items-center justify-center px-2">
+                                                    {/* Title */}
+                                                    <p className="text-[#1E3A5F] text-[9px] italic" style={{ fontFamily: 'serif' }}>Certificate</p>
+                                                    {/* Decorative line */}
+                                                    <div className="flex items-center gap-0.5 mt-0.5">
+                                                        <div className="w-3 h-[0.5px] bg-[#C9A227]" />
+                                                        <div className="w-1 h-1 bg-[#C9A227] rotate-45" />
+                                                        <div className="w-3 h-[0.5px] bg-[#C9A227]" />
+                                                    </div>
+                                                    <p className="text-[#1E3A5F] text-[4px] italic mt-0.5" style={{ fontFamily: 'serif' }}>of Achievement</p>
+                                                    {/* Name */}
+                                                    <p className="text-[#1E3A5F] text-[6px] mt-1" style={{ fontFamily: 'cursive' }}>John Smith</p>
+                                                    <div className="w-10 h-[0.5px] bg-[#C9A227]/70 mt-0.5" />
+                                                    {/* Seal */}
+                                                    <div className="mt-1.5 w-5 h-5 rounded-full bg-[#C9A227] flex items-center justify-center">
+                                                        <div className="w-4 h-4 rounded-full bg-[#1E3A5F] flex items-center justify-center">
+                                                            <span className="text-[#C9A227] text-[5px]">â˜…</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'modern-resume-1' ? (
+                                            // Modern Resume Preview
+                                            <div className="flex-1 relative overflow-hidden bg-white">
+                                                {/* Left Sidebar */}
+                                                <div className="absolute left-0 top-0 bottom-0 w-[30%] bg-[#1E293B] flex flex-col items-center pt-2">
+                                                    {/* Photo */}
+                                                    <div className="w-8 h-8 rounded-full bg-[#334155] border border-[#F8FAFC] mb-2 text-center flex items-center justify-center">
+                                                        <span className="text-[3px] text-white">IMG</span>
+                                                    </div>
+                                                    {/* Lines */}
+                                                    <div className="w-[80%] space-y-1">
+                                                        <div className="h-[1px] w-full bg-[#38BDF8]/50" />
+                                                        <div className="h-[1px] w-full bg-white/20" />
+                                                        <div className="h-[1px] w-full bg-white/20" />
+                                                    </div>
+                                                </div>
+                                                {/* Right Content */}
+                                                <div className="absolute right-0 top-0 bottom-0 w-[70%] px-2 pt-3 flex flex-col">
+                                                    {/* Name */}
+                                                    <div className="w-3/4 h-2 bg-[#1E293B] mb-0.5" />
+                                                    <div className="w-1/2 h-1 bg-[#38BDF8] mb-3" />
+                                                    {/* Section */}
+                                                    <div className="w-1/3 h-1 bg-[#0F172A] mb-0.5" />
+                                                    <div className="w-full h-[0.5px] bg-gray-300 mb-0.5" />
+                                                    <div className="w-full h-[0.5px] bg-gray-300 mb-0.5" />
+                                                    <div className="w-4/5 h-[0.5px] bg-gray-300" />
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'a4-resume-modern' ? (
+                                            // A4 Modern Resume Preview
+                                            <div className="flex-1 relative overflow-hidden bg-white">
+                                                {/* Left Sidebar */}
+                                                <div className="absolute left-0 top-0 bottom-0 w-[33%] bg-[#1A1A2E] flex flex-col items-center pt-3">
+                                                    {/* Photo */}
+                                                    <div className="w-8 h-8 rounded-full bg-[#16213E] border border-[#4ECCA3] mb-2 flex items-center justify-center">
+                                                        <span className="text-[3px] text-[#4ECCA3]">IMG</span>
+                                                    </div>
+                                                    {/* Name in Sidebar for this template style */}
+                                                    <div className="w-[80%] flex flex-col items-center gap-1 mb-2">
+                                                        <div className="h-[2px] w-full bg-white/90 rounded-sm" />
+                                                        <div className="h-[1px] w-2/3 bg-[#4ECCA3] rounded-sm" />
+                                                    </div>
+                                                    {/* Contact Lines */}
+                                                    <div className="w-[80%] space-y-1 mt-1">
+                                                        <div className="h-[0.5px] w-full bg-white/30" />
+                                                        <div className="h-[0.5px] w-full bg-white/30" />
+                                                        <div className="h-[0.5px] w-full bg-white/30" />
+                                                    </div>
+                                                </div>
+                                                {/* Right Content */}
+                                                <div className="absolute right-0 top-0 bottom-0 w-[67%] px-2 pt-4 flex flex-col">
+                                                    {/* Experience Section */}
+                                                    <div className="flex items-center gap-1 mb-1">
+                                                        <div className="w-0.5 h-2 bg-[#4ECCA3]" />
+                                                        <div className="w-16 h-1.5 bg-[#1A1A2E] rounded-[1px]" />
+                                                    </div>
+                                                    <div className="ml-1.5 space-y-0.5 mb-3">
+                                                        <div className="w-full h-[0.5px] bg-gray-300" />
+                                                        <div className="w-full h-[0.5px] bg-gray-300" />
+                                                        <div className="w-2/3 h-[0.5px] bg-gray-300" />
+                                                    </div>
+
+                                                    {/* Education Section */}
+                                                    <div className="flex items-center gap-1 mb-1">
+                                                        <div className="w-0.5 h-2 bg-[#4ECCA3]" />
+                                                        <div className="w-12 h-1.5 bg-[#1A1A2E] rounded-[1px]" />
+                                                    </div>
+                                                    <div className="ml-1.5 space-y-0.5">
+                                                        <div className="w-full h-[0.5px] bg-gray-300" />
+                                                        <div className="w-2/3 h-[0.5px] bg-gray-300" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'a4-poster-gradient' ? (
+                                            // A4 Gradient Poster Preview - Matched to Canvas
+                                            <div className="flex-1 relative overflow-hidden bg-[#050510]">
+                                                {/* Background Circles - Scaled down */}
+                                                <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[#F72585] rounded-full mix-blend-screen opacity-20"></div>
+                                                <div className="absolute top-[10%] -right-[10%] w-[40%] h-[40%] bg-[#4361EE] rounded-full mix-blend-screen opacity-20"></div>
+                                                <div className="absolute bottom-[0%] left-[0%] w-[40%] h-[40%] bg-[#7209B7] rounded-full mix-blend-screen opacity-25"></div>
+
+                                                {/* Grid Overlay */}
+                                                <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(#FFFFFF08 1px, transparent 1px), linear-gradient(90deg, #FFFFFF08 1px, transparent 1px)', backgroundSize: '25% 15%' }}></div>
+
+                                                {/* Headline Section */}
+                                                <div className="absolute inset-x-2 top-[15%] flex flex-col items-center">
+                                                    <p className="text-white text-[10px] font-black italic leading-[0.85]" style={{ fontFamily: 'Montserrat' }}>FUTURE</p>
+                                                    <p className="text-white text-[10px] font-black italic leading-[0.85]" style={{ fontFamily: 'Montserrat' }}>DESIGN</p>
+
+                                                    {/* Subhead Pink Box */}
+                                                    <div className="mt-1.5 text-white font-bold text-[1.5px] bg-[#F72585] px-1 py-0.5 tracking-widest">
+                                                        IMMERSIVE DIGITAL EXPERIENCE
+                                                    </div>
+                                                </div>
+
+                                                {/* Middle Columns */}
+                                                <div className="absolute top-[35%] left-3 right-3 flex justify-between">
+                                                    <div className="flex flex-col gap-0.5">
+                                                        <div className="text-[#4CC9F0] text-[2px] font-bold tracking-wider mb-0.5">SCHEDULE</div>
+                                                        <div className="text-white/60 text-[1.5px] leading-tight font-mono">DAY 01 . WRK<br />DAY 02 . TLK</div>
+                                                    </div>
+                                                    <div className="flex flex-col gap-0.5 items-end text-right">
+                                                        <div className="text-[#4CC9F0] text-[2px] font-bold tracking-wider mb-0.5">SPEAKERS</div>
+                                                        <div className="text-white/60 text-[1.5px] leading-tight font-mono">ALEX R.<br />SARAH K.</div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Tokyo Box - Matched to Screenshot */}
+                                                <div className="absolute left-[20%] right-[20%] top-[60%] h-5 border border-[#4CC9F0]/60 p-0.5 flex items-center bg-[#0A0A15]/50">
+                                                    {/* White Square Placeholder */}
+                                                    <div className="w-3.5 h-3.5 bg-white mr-1 flex-shrink-0"></div>
+                                                    {/* Text */}
+                                                    <div className="flex flex-col justify-center">
+                                                        <div className="text-white text-[2px] font-bold tracking-wide leading-tight">TOKYO . SHIBUYA</div>
+                                                        <div className="text-[#4361EE] text-[1.2px] font-mono leading-tight mt-[0.5px]">HALL A . LEVEL 4</div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Bottom Footer */}
+                                                <div className="absolute bottom-2 w-full text-center">
+                                                    <div className="text-[#8888AA] text-[1.5px] tracking-[1px] uppercase">POWERED BY . NVIDIA . UNITY</div>
+                                                </div>
+
+                                                {/* Side Text */}
+                                                <div className="absolute left-1 top-1/2 -rotate-90 text-[#4CC9F0] text-[2px] font-mono tracking-widest opacity-60">VOL.4 // 2026</div>
+                                            </div>
+                                        ) : template.id === 'event-flyer-geometric' ? (
+                                            // Event Flyer - Modern Geometric Preview
+                                            <div className="flex-1 relative overflow-hidden bg-[#F4F4F5]">
+                                                {/* Blue Sidebar - Left Aligned */}
+                                                <div className="absolute left-0 top-0 w-[24%] h-full bg-[#3B82F6]"></div>
+
+                                                {/* Date on Blue Bar */}
+                                                <div className="absolute top-1/2 left-[12%] -translate-x-1/2 -translate-y-1/2 -rotate-90 w-[200px] text-center">
+                                                    <span className="text-white text-[6px] font-bold tracking-[2px]">JULY 24TH . 2026</span>
+                                                </div>
+
+                                                {/* Red Circle - Top Right */}
+                                                {/* Red Circle - Top Right - Full Circle Visible */}
+                                                <div className="absolute -top-[-5%] right-[0%] w-[48%] pt-[48%] bg-[#EF4444] rounded-full z-0 h-0"></div>
+
+                                                {/* Tags - Overlapping */}
+                                                <div className="absolute top-[18%] left-[28%] flex gap-1 z-10">
+                                                    <div className="bg-[#18181B] px-1 py-[0.5px]">
+                                                        <span className="text-white text-[2.5px] font-bold uppercase tracking-wider block">HOUSE</span>
+                                                    </div>
+                                                    <div className="bg-white border-[0.5px] border-[#18181B] px-1 py-[0.5px]">
+                                                        <span className="text-[#18181B] text-[2.5px] font-bold uppercase tracking-wider block">TECHNO</span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Main Title - Centered Relative to White Space */}
+                                                <div className="absolute top-[28%] left-[28%] z-10">
+                                                    <div className="flex flex-col leading-[0.85]">
+                                                        <span className="text-[#18181B] text-[14px] font-black tracking-tighter" style={{ fontFamily: 'Outfit' }}>SUMMER</span>
+                                                        <span className="text-[#18181B] text-[14px] font-black tracking-tighter" style={{ fontFamily: 'Outfit' }}>SOUNDS</span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Yellow Bar - Behind Guest */}
+                                                <div className="absolute top-[56%] left-[60%] -translate-x-1/2 w-[70%] h-[3%] bg-[#F59E0B] -rotate-[5deg] z-0"></div>
+
+                                                {/* Guest Placeholder - Centered */}
+                                                <div className="absolute top-[60%] left-[60%] -translate-x-1/2 -translate-y-1/2 w-[22px] h-[22px] rounded-full bg-[#D4D4D8] border-[1px] border-[#18181B] z-20"></div>
+                                                <div className="absolute top-[75%] left-[60%] -translate-x-1/2 text-center w-full z-10">
+                                                    <div className="text-[#F59E0B] text-[2.5px] font-bold tracking-widest uppercase">SPECIAL GUEST</div>
+                                                </div>
+
+                                                {/* Bottom Elements */}
+                                                {/* Scan Box */}
+                                                <div className="absolute bottom-[8%] left-[30%] flex flex-col items-center gap-[2px]">
+                                                    <div className="w-[8px] h-[8px] border border-[#18181B] bg-white"></div>
+                                                    <span className="text-[#18181B] text-[1.5px] font-bold tracking-widest uppercase">SCAN</span>
+                                                </div>
+
+                                                {/* Ticket Badge */}
+                                                <div className="absolute bottom-[12%] right-[8%] w-[14px] h-[14px] bg-[#18181B] rounded-full flex items-center justify-center rotate-12 z-20">
+                                                    <span className="text-white text-[4px] font-bold rotate-[-12deg]">$25</span>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'a5-menu-elegant' ? (
+                                            // A5 Elegant Menu Preview - Modern Minimalist
+                                            <div className="flex-1 relative overflow-hidden bg-[#FFFBF0] flex flex-col items-center pt-4">
+                                                {/* Border */}
+                                                <div className="absolute inset-1 border-[0.5px] border-[#2C3333]/10 pointer-events-none"></div>
+
+                                                {/* Header */}
+                                                <div className="flex flex-col items-center mb-2 z-10">
+                                                    <span className="text-[#2C3333] text-[8px] font-bold tracking-[2px] leading-tight" style={{ fontFamily: 'serif' }}>SEASONAL</span>
+                                                    <span className="text-[#2C3333] text-[8px] font-bold tracking-[2px] leading-tight" style={{ fontFamily: 'serif' }}>MENU</span>
+                                                    <div className="w-4 h-[0.5px] bg-[#2C3333]/50 mt-1"></div>
+                                                </div>
+
+                                                {/* Sections */}
+                                                <div className="w-full px-3 flex flex-col gap-2 z-10">
+                                                    {/* Starters */}
+                                                    <div className="flex flex-col items-center mb-0.5">
+                                                        <span className="text-[#2C3333] text-[3px] font-bold tracking-widest mb-1">STARTERS</span>
+                                                        <div className="w-full flex justify-between items-baseline mb-[1px]">
+                                                            <span className="text-[#2C3333] text-[2.5px] font-bold">French Onion Soup</span>
+                                                            <span className="text-[#2C3333] text-[2.5px]">$14</span>
+                                                        </div>
+                                                        <div className="w-full text-left leading-[0.8]">
+                                                            <span className="text-[#555555] text-[2px] italic">Caramelized onions, beef broth...</span>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Mains */}
+                                                    <div className="flex flex-col items-center mt-1">
+                                                        <span className="text-[#2C3333] text-[3px] font-bold tracking-widest mb-1">MAINS</span>
+                                                        <div className="w-full flex justify-between items-baseline mb-[1px]">
+                                                            <span className="text-[#2C3333] text-[2.5px] font-bold">Pan Seared Scallops</span>
+                                                            <span className="text-[#2C3333] text-[2.5px]">$32</span>
+                                                        </div>
+                                                        <div className="w-full text-left leading-[0.8]">
+                                                            <span className="text-[#555555] text-[2px] italic">Cauliflower purÃ©e, crispy pancetta...</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Footer Line */}
+                                                <div className="absolute bottom-2 w-full text-center z-10">
+                                                    <span className="text-[#888888] text-[1.5px]">EST. 2024 . PARIS</span>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'a6-card-minimal' ? (
+                                            // Swiss Grid Preview - Classic International
+                                            <div className="flex-1 relative overflow-hidden bg-[#F4F4F4] flex flex-col items-center">
+                                                {/* Red Top Bar */}
+                                                <div className="absolute top-[6%] left-0 right-0 h-[11%] bg-[#D90429]"></div>
+
+                                                {/* Grid Lines */}
+                                                <div className="absolute top-[35%] left-0 right-0 h-[0.5px] bg-black/20"></div>
+                                                <div className="absolute top-[68%] left-0 right-0 h-[0.5px] bg-black/20"></div>
+                                                <div className="absolute left-[50%] top-[35%] bottom-0 w-[0.5px] bg-black/20"></div>
+
+                                                {/* Main Title - Massive */}
+                                                <div className="absolute top-[18%] left-2 flex flex-col leading-[0.85]">
+                                                    <span className="text-black text-[10px] font-black tracking-tight" style={{ fontFamily: 'Inter' }}>HELVETIC</span>
+                                                    <span className="text-black text-[10px] font-black tracking-tight" style={{ fontFamily: 'Inter' }}>MUSEUM</span>
+                                                </div>
+
+                                                {/* Red Circle Accent */}
+                                                <div className="absolute bottom-[15%] right-[8%] w-[25%] pt-[25%] bg-[#D90429] rounded-full opacity-90"></div>
+
+                                                {/* Details Text Left */}
+                                                <div className="absolute top-[38%] left-2 w-[45%]">
+                                                    <span className="text-black text-[2px] font-bold block mb-[1px]">EXHIBITION</span>
+                                                    <span className="text-black text-[1.5px] leading-tight block">Raw power of modernist design principles.</span>
+                                                </div>
+
+                                                {/* Rotated Date */}
+                                                <div className="absolute bottom-2 left-2 origin-bottom-left rotate-[-90deg]">
+                                                    <span className="text-[#D90429] text-[4px] font-bold tracking-widest whitespace-nowrap">FEB 28 - MAR 15</span>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'a6-invitation-elegant' ? (
+                                            // Elegant Invitation Preview - Deep Teal & Gold
+                                            <div className="flex-1 relative overflow-hidden bg-[#0F3D3E] flex flex-col items-center">
+                                                {/* Borders */}
+                                                <div className="absolute inset-2 border-[0.5px] border-[#D4AF37]"></div>
+                                                <div className="absolute inset-3 border-[0.25px] border-[#D4AF37]/60"></div>
+
+                                                {/* Header */}
+                                                <div className="absolute top-[18%] w-full text-center">
+                                                    <span className="text-[#F0E6D2] text-[1.5px] tracking-[0.5px] block opacity-80" style={{ fontFamily: 'Montserrat' }}>TOGETHER WITH FAMILIES</span>
+                                                </div>
+
+                                                {/* Main Title - Script */}
+                                                <div className="absolute top-[25%] w-full text-center">
+                                                    <span className="text-[#D4AF37] text-[6px] leading-none" style={{ fontFamily: 'Pinyon Script' }}>We Invite You</span>
+                                                </div>
+
+                                                {/* Names */}
+                                                <div className="absolute top-[45%] w-full text-center flex flex-col items-center">
+                                                    <span className="text-white text-[5px] leading-tight uppercase tracking-widest block" style={{ fontFamily: 'Cinzel' }}>ALEXANDER</span>
+                                                    <span className="text-white text-[3px] leading-tight py-0.5 block" style={{ fontFamily: 'Cinzel' }}>&</span>
+                                                    <span className="text-white text-[5px] leading-tight uppercase tracking-widest block" style={{ fontFamily: 'Cinzel' }}>SOPHIA</span>
+                                                </div>
+
+                                                {/* Divider */}
+                                                <div className="absolute top-[65%] w-full flex items-center justify-center gap-1">
+                                                    <div className="w-3 h-[0.25px] bg-[#D4AF37]/80"></div>
+                                                    <div className="w-1 h-1 bg-[#D4AF37] rotate-45 transform scale-50"></div>
+                                                    <div className="w-3 h-[0.25px] bg-[#D4AF37]/80"></div>
+                                                </div>
+
+                                                {/* Date & Time */}
+                                                <div className="absolute top-[72%] w-full text-center flex flex-col gap-[1px]">
+                                                    <span className="text-white text-[2px] font-bold tracking-wider uppercase" style={{ fontFamily: 'Cinzel' }}>OCTOBER 24TH</span>
+                                                    <span className="text-[#F0E6D2] text-[1.5px] tracking-wide uppercase opacity-90" style={{ fontFamily: 'Montserrat' }}>AT FOUR O'CLOCK</span>
+                                                </div>
+
+                                                {/* RSVP */}
+                                                <div className="absolute bottom-[10%] text-center">
+                                                    <span className="text-[#D4AF37] text-[1.5px] font-bold tracking-widest uppercase" style={{ fontFamily: 'Montserrat' }}>RECEPTION TO FOLLOW</span>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'letterhead-corporate-1' ? (
+                                            // Letterhead Corporate Preview - Professional Design
+                                            <div className="flex-1 flex items-center justify-center bg-gray-50">
+                                                <div className="w-[92%] h-[96%] relative overflow-hidden bg-white shadow-sm border border-gray-100">
+                                                    {/* Header */}
+                                                    <div className="w-full bg-[#1E3A8A] py-1.5 px-1.5 flex items-center gap-1">
+                                                        {/* Logo */}
+                                                        <div className="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                                                            <div className="w-2 h-2 bg-[#1E3A8A] rotate-45"></div>
+                                                        </div>
+                                                        {/* Company Info */}
+                                                        <div className="flex-1">
+                                                            <p className="text-white text-[5px] font-bold tracking-[0.5px]">NEXUS INNOVATIONS</p>
+                                                            <p className="text-blue-200 text-[2.5px] italic">Transforming Ideas Into Reality</p>
+                                                        </div>
+                                                        {/* Contact */}
+                                                        <div className="text-right">
+                                                            <p className="text-blue-100 text-[2px]">ðŸ“ž +1 (555) 123-4567</p>
+                                                            <p className="text-blue-100 text-[2px]">âœ‰ï¸ info@nexus.com</p>
+                                                        </div>
+                                                    </div>
+                                                    {/* Accent Stripe */}
+                                                    <div className="w-full h-[2px] bg-[#3B82F6]"></div>
+                                                    {/* Date */}
+                                                    <p className="text-gray-400 text-[2.5px] text-right pr-1.5 mt-1">January 11, 2026</p>
+                                                    {/* Letter Content */}
+                                                    <div className="px-1.5 mt-1">
+                                                        <p className="text-gray-500 text-[2.5px]">To, Recipient Name</p>
+                                                        <p className="text-[#1E3A8A] text-[3px] font-semibold mt-1">Subject: Your Subject Here</p>
+                                                        <p className="text-gray-700 text-[2.5px] mt-0.5">Dear Sir/Madam,</p>
+                                                        <div className="mt-0.5 space-y-[1px]">
+                                                            <div className="w-full h-[1px] bg-gray-200"></div>
+                                                            <div className="w-[80%] h-[1px] bg-gray-200"></div>
+                                                            <div className="w-[90%] h-[1px] bg-gray-200"></div>
+                                                        </div>
+                                                    </div>
+                                                    {/* Signature Area */}
+                                                    <div className="px-1.5 mt-2">
+                                                        <p className="text-gray-600 text-[2.5px]">Yours sincerely,</p>
+                                                        <div className="w-6 h-[0.5px] bg-gray-300 mt-1"></div>
+                                                        <p className="text-gray-700 text-[2.5px] font-semibold mt-0.5">John Anderson</p>
+                                                    </div>
+                                                    {/* Footer */}
+                                                    <div className="absolute bottom-0.5 left-0 right-0 px-1.5">
+                                                        <div className="w-full h-[0.5px] bg-[#1E3A8A]"></div>
+                                                        <p className="text-gray-400 text-[2px] text-center mt-[1px]">ðŸ“ 1234 Innovation Drive | ðŸ“ž +1 (555) 123-4567</p>
+                                                        <p className="text-[#3B82F6] text-[1.5px] text-center tracking-wide">EXCELLENCE â€¢ INNOVATION â€¢ INTEGRITY</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : template.id === 'tech-logo-nexcore' ? (
+                                            // Tech Logo Preview
+                                            <div className="flex-1 flex items-center justify-center bg-white">
+                                                <div className="flex items-center gap-2 p-3">
+                                                    {/* Cube Icon */}
+                                                    <div className="relative w-6 h-6">
+                                                        <div className="absolute inset-0 bg-[#4F46E5] rotate-45 rounded-sm"></div>
+                                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-2 bg-[#6366F1] rotate-45 rounded-sm"></div>
+                                                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-4 bg-[#818CF8] rotate-45 rounded-sm"></div>
+                                                    </div>
+                                                    {/* Text */}
+                                                    <div className="flex flex-col">
+                                                        <p className="text-[#111827] text-[10px] font-extrabold tracking-tight leading-none">NEXCORE</p>
+                                                        <p className="text-gray-500 text-[4px] tracking-[1px] mt-0.5">FUTURE SYSTEMS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            // Generic fallback preview
+                                            <div className="flex-1 flex items-center justify-center">
+                                                <span className="text-gray-400 text-lg">{template.name.charAt(0)}</span>
+                                            </div>
+                                        )}

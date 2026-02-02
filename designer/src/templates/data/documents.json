@@ -1,0 +1,3387 @@
+[
+    {
+        "id": "modern-resume-1",
+        "name": "Creative Resume",
+        "category": "documents",
+        "width": 1080,
+        "height": 1920,
+        "thumbnail": "/templates/previews/modern-resume-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#FFFFFF"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Sidebar BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 180,
+                    "y": 960,
+                    "width": 360,
+                    "height": 1920,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E293B",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Photo Circle",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 180,
+                    "y": 250,
+                    "width": 240,
+                    "height": 240,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#334155",
+                    "stroke": "#F8FAFC",
+                    "strokeWidth": 4,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Photo Text",
+                "content": "PHOTO",
+                "transform": {
+                    "x": 180,
+                    "y": 250,
+                    "width": 160,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#94A3B8",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 6
+            },
+            {
+                "type": "text",
+                "name": "Contact Header",
+                "content": "CONTACT",
+                "transform": {
+                    "x": 180,
+                    "y": 500,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "shape",
+                "name": "Contact Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 180,
+                    "y": 530,
+                    "width": 80,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Email",
+                "content": "hello@johndoe.com",
+                "transform": {
+                    "x": 180,
+                    "y": 580,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Phone",
+                "content": "+1 (555) 123-4567",
+                "transform": {
+                    "x": 180,
+                    "y": 620,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Website",
+                "content": "www.johndoe.com",
+                "transform": {
+                    "x": 180,
+                    "y": 660,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Location",
+                "content": "New York, USA",
+                "transform": {
+                    "x": 180,
+                    "y": 700,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Skills Header",
+                "content": "SKILLS",
+                "transform": {
+                    "x": 180,
+                    "y": 850,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "shape",
+                "name": "Skills Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 180,
+                    "y": 880,
+                    "width": 80,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Skill 1",
+                "content": "Project Management",
+                "transform": {
+                    "x": 180,
+                    "y": 930,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Skill 2",
+                "content": "Strategic Planning",
+                "transform": {
+                    "x": 180,
+                    "y": 970,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Skill 3",
+                "content": "Digital Marketing",
+                "transform": {
+                    "x": 180,
+                    "y": 1010,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Skill 4",
+                "content": "Data Analysis",
+                "transform": {
+                    "x": 180,
+                    "y": 1050,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#E2E8F0",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Edu Header",
+                "content": "EDUCATION",
+                "transform": {
+                    "x": 180,
+                    "y": 1200,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "shape",
+                "name": "Edu Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 180,
+                    "y": 1230,
+                    "width": 80,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Degree",
+                "content": "MBA Marketing",
+                "transform": {
+                    "x": 180,
+                    "y": 1280,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "University",
+                "content": "Harvard University",
+                "transform": {
+                    "x": 180,
+                    "y": 1310,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#94A3B8",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "italic",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Year",
+                "content": "2018 - 2020",
+                "transform": {
+                    "x": 180,
+                    "y": 1340,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Name",
+                "content": "JOHN DOE",
+                "transform": {
+                    "x": 720,
+                    "y": 200,
+                    "width": 620,
+                    "height": 80,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E293B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 84,
+                    "fontWeight": 800,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Job Title",
+                "content": "MARKETING DIRECTOR",
+                "transform": {
+                    "x": 720,
+                    "y": 260,
+                    "width": 620,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Profile Title",
+                "content": "PROFILE",
+                "transform": {
+                    "x": 720,
+                    "y": 380,
+                    "width": 620,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 28,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "Profile Underline",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 440,
+                    "y": 410,
+                    "width": 60,
+                    "height": 4,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Profile Content",
+                "content": "Innovative and results-driven Marketing Director with over 10 years of experience leading comprehensive marketing strategies. Skilled in digital transformation, brand management, and market expansion. Proven track record of increasing revenue and improving brand visibility through creative campaigns.",
+                "transform": {
+                    "x": 720,
+                    "y": 500,
+                    "width": 620,
+                    "height": 160,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#334155",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Experience Title",
+                "content": "EXPERIENCE",
+                "transform": {
+                    "x": 720,
+                    "y": 650,
+                    "width": 620,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 28,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "Exp Underline",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 470,
+                    "y": 680,
+                    "width": 60,
+                    "height": 4,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#38BDF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Title",
+                "content": "Marketing Director",
+                "transform": {
+                    "x": 720,
+                    "y": 730,
+                    "width": 620,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E293B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Company",
+                "content": "Global Tech Solutions | 2020 - Present",
+                "transform": {
+                    "x": 720,
+                    "y": 760,
+                    "width": 620,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Desc",
+                "content": "• Lead a team of 15 marketing professionals\n• Increased annual revenue by 25% through targeted ad campaigns\n• Launched 3 major product lines successfully\n• Managed a $2M annual marketing budget",
+                "transform": {
+                    "x": 720,
+                    "y": 840,
+                    "width": 620,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#334155",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Title",
+                "content": "Senor Brand Manager",
+                "transform": {
+                    "x": 720,
+                    "y": 960,
+                    "width": 620,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E293B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Company",
+                "content": "Creative Media Corp | 2016 - 2020",
+                "transform": {
+                    "x": 720,
+                    "y": 990,
+                    "width": 620,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Desc",
+                "content": "• Developed brand strategy for 5 key accounts\n• Oversaw social media growth of 200%\n• Collaborated with cross-functional teams for product launches",
+                "transform": {
+                    "x": 720,
+                    "y": 1060,
+                    "width": 620,
+                    "height": 90,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#334155",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 3 Title",
+                "content": "Marketing Specialist",
+                "transform": {
+                    "x": 720,
+                    "y": 1160,
+                    "width": 620,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E293B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 3 Company",
+                "content": "StartUp Inc | 2014 - 2016",
+                "transform": {
+                    "x": 720,
+                    "y": 1190,
+                    "width": 620,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Job 3 Desc",
+                "content": "• Managed email marketing campaigns\n• Conducted market research and competitor analysis\n• Assisted in event planning and execution",
+                "transform": {
+                    "x": 720,
+                    "y": 1260,
+                    "width": 620,
+                    "height": 90,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#334155",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            }
+        ],
+        "theme": "resume"
+    },
+    {
+        "id": "a4-resume-modern",
+        "name": "Modern Resume",
+        "category": "documents",
+        "width": 2480,
+        "height": 3508,
+        "thumbnail": "/templates/previews/a4-resume-modern.png",
+        "background": {
+            "type": "solid",
+            "color": "#FFFFFF"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Sidebar",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 400,
+                    "y": 1754,
+                    "width": 800,
+                    "height": 3508,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1A1A2E",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Photo Frame",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 400,
+                    "y": 450,
+                    "width": 350,
+                    "height": 350,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#16213E",
+                    "stroke": "#4ECCA3",
+                    "strokeWidth": 6,
+                    "opacity": 1
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "text",
+                "name": "Name",
+                "content": "JOHN DOE",
+                "transform": {
+                    "x": 400,
+                    "y": 700,
+                    "width": 600,
+                    "height": 70,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 42,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Title",
+                "content": "Senior UX Designer",
+                "transform": {
+                    "x": 400,
+                    "y": 780,
+                    "width": 500,
+                    "height": 36,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 20,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "shape",
+                "name": "Divider 1",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 400,
+                    "y": 860,
+                    "width": 300,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.5
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Contact Header",
+                "content": "CONTACT",
+                "transform": {
+                    "x": 400,
+                    "y": 950,
+                    "width": 400,
+                    "height": 32,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Email",
+                "content": "📧 john@example.com",
+                "transform": {
+                    "x": 400,
+                    "y": 1020,
+                    "width": 600,
+                    "height": 26,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 13
+            },
+            {
+                "type": "text",
+                "name": "Phone",
+                "content": "📱 +1 (555) 123-4567",
+                "transform": {
+                    "x": 400,
+                    "y": 1070,
+                    "width": 600,
+                    "height": 26,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 14
+            },
+            {
+                "type": "text",
+                "name": "Website",
+                "content": "🌐 www.johndoe.com",
+                "transform": {
+                    "x": 400,
+                    "y": 1120,
+                    "width": 600,
+                    "height": 26,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "text",
+                "name": "Location",
+                "content": "📍 New York, USA",
+                "transform": {
+                    "x": 400,
+                    "y": 1170,
+                    "width": 600,
+                    "height": 26,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 16
+            },
+            {
+                "type": "shape",
+                "name": "Divider 2",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 400,
+                    "y": 1260,
+                    "width": 300,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.5
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Skills Header",
+                "content": "SKILLS",
+                "transform": {
+                    "x": 400,
+                    "y": 1350,
+                    "width": 400,
+                    "height": 32,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 17
+            },
+            {
+                "type": "text",
+                "name": "Skills List",
+                "content": "• UI/UX Design\n• Figma & Adobe XD\n• Prototyping\n• User Research\n• Design Systems\n• HTML/CSS",
+                "transform": {
+                    "x": 400,
+                    "y": 1550,
+                    "width": 600,
+                    "height": 280,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.8,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "text",
+                "name": "Education Header",
+                "content": "EDUCATION",
+                "transform": {
+                    "x": 400,
+                    "y": 1850,
+                    "width": 400,
+                    "height": 32,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 19
+            },
+            {
+                "type": "text",
+                "name": "Education",
+                "content": "Bachelor of Design\nArt Institute\n2016 - 2020",
+                "transform": {
+                    "x": 400,
+                    "y": 1980,
+                    "width": 600,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#CCCCCC",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "Exp Accent",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 900,
+                    "y": 350,
+                    "width": 8,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "text",
+                "name": "Experience Header",
+                "content": "WORK EXPERIENCE",
+                "transform": {
+                    "x": 1540,
+                    "y": 350,
+                    "width": 900,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1A1A2E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 28,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 30
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Title",
+                "content": "Senior UX Designer",
+                "transform": {
+                    "x": 1540,
+                    "y": 480,
+                    "width": 900,
+                    "height": 36,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1A1A2E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 22,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.3,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 31
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Company",
+                "content": "Tech Innovations Inc. | 2021 - Present",
+                "transform": {
+                    "x": 1540,
+                    "y": 530,
+                    "width": 900,
+                    "height": 28,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.3,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 32
+            },
+            {
+                "type": "text",
+                "name": "Job 1 Desc",
+                "content": "• Lead design team of 5 members\n• Created design system used across 12 products\n• Improved user retention by 35%",
+                "transform": {
+                    "x": 1540,
+                    "y": 640,
+                    "width": 900,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#555555",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.7,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 33
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Title",
+                "content": "UX Designer",
+                "transform": {
+                    "x": 1540,
+                    "y": 800,
+                    "width": 900,
+                    "height": 36,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1A1A2E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 22,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.3,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 34
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Company",
+                "content": "Creative Agency | 2018 - 2021",
+                "transform": {
+                    "x": 1540,
+                    "y": 850,
+                    "width": 900,
+                    "height": 28,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.3,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 35
+            },
+            {
+                "type": "text",
+                "name": "Job 2 Desc",
+                "content": "• Designed mobile apps for Fortune 500 clients\n• Conducted user research & usability testing\n• Collaborated with cross-functional teams",
+                "transform": {
+                    "x": 1540,
+                    "y": 960,
+                    "width": 900,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#555555",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.7,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 36
+            },
+            {
+                "type": "shape",
+                "name": "About Accent",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 900,
+                    "y": 1150,
+                    "width": 8,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4ECCA3",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "text",
+                "name": "About Header",
+                "content": "ABOUT ME",
+                "transform": {
+                    "x": 1540,
+                    "y": 1150,
+                    "width": 900,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1A1A2E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 28,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 40
+            },
+            {
+                "type": "text",
+                "name": "About Text",
+                "content": "Passionate UX designer with 6+ years of experience creating user-centered digital products. I combine creativity with data-driven insights to deliver exceptional user experiences.",
+                "transform": {
+                    "x": 1540,
+                    "y": 1300,
+                    "width": 900,
+                    "height": 150,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#555555",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.7,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 41
+            }
+        ],
+        "theme": "resume"
+    },
+    {
+        "id": "certificate-achievement-1",
+        "name": "Certificate of Achievement",
+        "category": "documents",
+        "width": 1600,
+        "height": 1200,
+        "thumbnail": "/templates/previews/certificate-achievement-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#FDFBF7"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Border Outer",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 800,
+                    "y": 600,
+                    "width": 1540,
+                    "height": 1140,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": null,
+                    "stroke": "#1E3A5F",
+                    "strokeWidth": 8,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Border Inner",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 800,
+                    "y": 600,
+                    "width": 1480,
+                    "height": 1080,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": null,
+                    "stroke": "#C9A227",
+                    "strokeWidth": 3,
+                    "opacity": 1
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "shape",
+                "name": "Corner TL Outer",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 100,
+                    "y": 100,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Corner TL Inner",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 100,
+                    "y": 100,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Corner TR Outer",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 1500,
+                    "y": 100,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Corner TR Inner",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 1500,
+                    "y": 100,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Corner BL Outer",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 100,
+                    "y": 1100,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Corner BL Inner",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 100,
+                    "y": 1100,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Corner BR Outer",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 1500,
+                    "y": 1100,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Corner BR Inner",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 1500,
+                    "y": 1100,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Header Ribbon",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 800,
+                    "y": 140,
+                    "width": 400,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Header Text",
+                "content": "✧ OFFICIAL DOCUMENT ✧",
+                "transform": {
+                    "x": 800,
+                    "y": 140,
+                    "width": 380,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Certificate Title",
+                "content": "Certificate",
+                "transform": {
+                    "x": 800,
+                    "y": 260,
+                    "width": 1000,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": 96,
+                    "fontWeight": 400,
+                    "fontStyle": "italic",
+                    "textAlign": "center",
+                    "lineHeight": 1.1,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "shape",
+                "name": "Title Underline Left",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 500,
+                    "y": 320,
+                    "width": 200,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 6
+            },
+            {
+                "type": "shape",
+                "name": "Title Diamond",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 800,
+                    "y": 320,
+                    "width": 12,
+                    "height": 12,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 7
+            },
+            {
+                "type": "shape",
+                "name": "Title Underline Right",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 1100,
+                    "y": 320,
+                    "width": 200,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 6
+            },
+            {
+                "type": "text",
+                "name": "Achievement Text",
+                "content": "of Achievement",
+                "transform": {
+                    "x": 800,
+                    "y": 380,
+                    "width": 500,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": 36,
+                    "fontWeight": 400,
+                    "fontStyle": "italic",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Presented To",
+                "content": "This Certificate is Proudly Presented to",
+                "transform": {
+                    "x": 800,
+                    "y": 480,
+                    "width": 800,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#5A6C7D",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 13
+            },
+            {
+                "type": "text",
+                "name": "Recipient Name",
+                "content": "John William Smith",
+                "transform": {
+                    "x": 800,
+                    "y": 570,
+                    "width": 1000,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Great Vibes",
+                    "fontSize": 72,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 14
+            },
+            {
+                "type": "shape",
+                "name": "Name Line Left",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 450,
+                    "y": 630,
+                    "width": 250,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.7
+                },
+                "zIndex": 8
+            },
+            {
+                "type": "shape",
+                "name": "Name Star",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 800,
+                    "y": 630,
+                    "width": 10,
+                    "height": 10,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 9
+            },
+            {
+                "type": "shape",
+                "name": "Name Line Right",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 1150,
+                    "y": 630,
+                    "width": 250,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.7
+                },
+                "zIndex": 8
+            },
+            {
+                "type": "text",
+                "name": "Description",
+                "content": "In recognition of outstanding dedication, exceptional performance,\nand remarkable contribution to excellence in their field of expertise.",
+                "transform": {
+                    "x": 800,
+                    "y": 720,
+                    "width": 1000,
+                    "height": 80,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#5A6C7D",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.8,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "shape",
+                "name": "Seal Outer",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 800,
+                    "y": 880,
+                    "width": 120,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "Seal Middle",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 800,
+                    "y": 880,
+                    "width": 100,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "shape",
+                "name": "Seal Inner",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 800,
+                    "y": 880,
+                    "width": 80,
+                    "height": 80,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": null,
+                    "stroke": "#C9A227",
+                    "strokeWidth": 2,
+                    "opacity": 1
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "text",
+                "name": "Seal Icon",
+                "content": "★",
+                "transform": {
+                    "x": 800,
+                    "y": 880,
+                    "width": 60,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A227",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 40,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 23
+            },
+            {
+                "type": "text",
+                "name": "Date Value",
+                "content": "January 9th, 2026",
+                "transform": {
+                    "x": 350,
+                    "y": 1000,
+                    "width": 250,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 16
+            },
+            {
+                "type": "shape",
+                "name": "Date Line",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 350,
+                    "y": 1025,
+                    "width": 200,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.5
+                },
+                "zIndex": 8
+            },
+            {
+                "type": "text",
+                "name": "Date Label",
+                "content": "Date Awarded",
+                "transform": {
+                    "x": 350,
+                    "y": 1055,
+                    "width": 150,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#5A6C7D",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 1,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 17
+            },
+            {
+                "type": "text",
+                "name": "Signature",
+                "content": "Director Signature",
+                "transform": {
+                    "x": 1250,
+                    "y": 1000,
+                    "width": 250,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Great Vibes",
+                    "fontSize": 28,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "shape",
+                "name": "Signature Line",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 1250,
+                    "y": 1025,
+                    "width": 200,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A5F",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.5
+                },
+                "zIndex": 8
+            },
+            {
+                "type": "text",
+                "name": "Signature Label",
+                "content": "Authorized Signature",
+                "transform": {
+                    "x": 1250,
+                    "y": 1055,
+                    "width": 180,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#5A6C7D",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 1,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 19
+            },
+            {
+                "type": "text",
+                "name": "Certificate ID",
+                "content": "Certificate No: WM-2026-0109",
+                "transform": {
+                    "x": 800,
+                    "y": 1000,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#5A6C7D",
+                    "opacity": 0.7
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 11,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 15
+            }
+        ],
+        "theme": "certificate"
+    },
+    {
+        "id": "letterhead-corporate-1",
+        "name": "Letterhead",
+        "category": "documents",
+        "width": 1240,
+        "height": 1754,
+        "thumbnail": "/templates/previews/letterhead-corporate-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#FFFFFF"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Header BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 620,
+                    "y": 90,
+                    "width": 1240,
+                    "height": 180,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A8A",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Header Accent",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 620,
+                    "y": 180,
+                    "width": 1240,
+                    "height": 8,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#3B82F6",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "shape",
+                "name": "Logo BG",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 140,
+                    "y": 90,
+                    "width": 100,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Logo Icon",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 140,
+                    "y": 90,
+                    "width": 45,
+                    "height": 45,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A8A",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Logo Inner",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 140,
+                    "y": 90,
+                    "width": 25,
+                    "height": 25,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#3B82F6",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Company Name",
+                "content": "NEXUS INNOVATIONS",
+                "transform": {
+                    "x": 520,
+                    "y": 65,
+                    "width": 600,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 34,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Tagline",
+                "content": "Transforming Ideas Into Reality",
+                "transform": {
+                    "x": 430,
+                    "y": 110,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#93C5FD",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "italic",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 1,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Header Contact",
+                "content": "📞 +1 (555) 123-4567\n✉️ info@nexusinnovations.com\n🌐 www.nexusinnovations.com",
+                "transform": {
+                    "x": 1050,
+                    "y": 80,
+                    "width": 280,
+                    "height": 80,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#DBEAFE",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 11,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.8,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Date",
+                "content": "January 11, 2026",
+                "transform": {
+                    "x": 1050,
+                    "y": 260,
+                    "width": 200,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#6B7280",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 13,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "text",
+                "name": "Recipient",
+                "content": "To,\nRecipient Name\nCompany/Organization\n123 Business Street\nCity, State 12345",
+                "transform": {
+                    "x": 225,
+                    "y": 350,
+                    "width": 350,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#374151",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.7,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 16
+            },
+            {
+                "type": "text",
+                "name": "Subject",
+                "content": "Subject: Your Subject Line Here",
+                "transform": {
+                    "x": 350,
+                    "y": 470,
+                    "width": 600,
+                    "height": 28,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A8A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 15,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 17
+            },
+            {
+                "type": "text",
+                "name": "Salutation",
+                "content": "Dear Sir/Madam,",
+                "transform": {
+                    "x": 170,
+                    "y": 530,
+                    "width": 240,
+                    "height": 28,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1F2937",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "text",
+                "name": "Letter Body",
+                "content": "I am writing to you regarding [purpose of the letter]. We are pleased to present our proposal for your consideration.\n\nAt Nexus Innovations, we pride ourselves on delivering exceptional solutions that drive growth and innovation. Our team of experts is dedicated to understanding your unique needs and providing tailored services that exceed expectations.\n\nWe would welcome the opportunity to discuss this matter further at your earliest convenience. Please do not hesitate to contact us should you require any additional information.\n\nThank you for your time and consideration.",
+                "transform": {
+                    "x": 620,
+                    "y": 720,
+                    "width": 1040,
+                    "height": 300,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#374151",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.9,
+                    "letterSpacing": 0.2,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 19
+            },
+            {
+                "type": "text",
+                "name": "Closing",
+                "content": "Yours sincerely,",
+                "transform": {
+                    "x": 175,
+                    "y": 930,
+                    "width": 250,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1F2937",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "Signature Line",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 200,
+                    "y": 1020,
+                    "width": 200,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#9CA3AF",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Signatory Name",
+                "content": "John Anderson\nChief Executive Officer",
+                "transform": {
+                    "x": 200,
+                    "y": 1070,
+                    "width": 250,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1F2937",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.6,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "shape",
+                "name": "Footer Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 620,
+                    "y": 1660,
+                    "width": 1140,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A8A",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 25
+            },
+            {
+                "type": "text",
+                "name": "Footer Address",
+                "content": "📍 1234 Innovation Drive, Suite 500, Tech City, TC 98765  |  📞 +1 (555) 123-4567  |  ✉️ info@nexusinnovations.com",
+                "transform": {
+                    "x": 620,
+                    "y": 1695,
+                    "width": 1000,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#6B7280",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 11,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0.3,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 26
+            },
+            {
+                "type": "text",
+                "name": "Footer Tagline",
+                "content": "Excellence • Innovation • Integrity",
+                "transform": {
+                    "x": 620,
+                    "y": 1725,
+                    "width": 300,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#3B82F6",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 10,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 27
+            },
+            {
+                "type": "shape",
+                "name": "Side Accent",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 25,
+                    "y": 877,
+                    "width": 8,
+                    "height": 1754,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1E3A8A",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.1
+                },
+                "zIndex": 0
+            }
+        ],
+        "theme": "companystationery"
+    }
+]

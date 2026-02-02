@@ -1,0 +1,173 @@
+[
+    {
+        "id": "tech-logo-nexcore",
+        "name": "Tech Logo",
+        "category": "technology",
+        "width": 400,
+        "height": 200,
+        "thumbnail": "/templates/previews/tech-logo-nexcore.png",
+        "background": {
+            "type": "solid",
+            "color": "#FFFFFF"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Logo BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 200,
+                    "y": 100,
+                    "width": 360,
+                    "height": 160,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "transparent",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 0
+            },
+            {
+                "type": "shape",
+                "name": "Cube Base",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 80,
+                    "y": 100,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4F46E5",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "shape",
+                "name": "Cube Top",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 80,
+                    "y": 85,
+                    "width": 35,
+                    "height": 20,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#6366F1",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "shape",
+                "name": "Cube Side",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 95,
+                    "y": 100,
+                    "width": 20,
+                    "height": 35,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#818CF8",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "text",
+                "name": "Company Name",
+                "content": "NEXCORE",
+                "transform": {
+                    "x": 245,
+                    "y": 85,
+                    "width": 200,
+                    "height": 45,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#111827",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 36,
+                    "fontWeight": 800,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Tagline",
+                "content": "FUTURE SYSTEMS",
+                "transform": {
+                    "x": 230,
+                    "y": 120,
+                    "width": 180,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#6B7280",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 11,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 6
+            }
+        ],
+        "theme": "corporatebranding"
+    }
+]

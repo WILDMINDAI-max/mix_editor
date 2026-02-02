@@ -1,0 +1,1341 @@
+[
+    {
+        "id": "bc-modern-001",
+        "name": "Modern Corp Card",
+        "category": "business",
+        "theme": "businesscard",
+        "width": 1050,
+        "height": 600,
+        "thumbnail": "/templates/previews/bc-modern-001.png",
+        "background": {
+            "type": "solid",
+            "color": "#111827"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Accent Bar",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 20,
+                    "y": 300,
+                    "width": 40,
+                    "height": 600,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#3B82F6",
+                    "stroke": null,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Diagonal Splash",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 900,
+                    "y": 300,
+                    "width": 400,
+                    "height": 800,
+                    "rotation": 15,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#1F2937",
+                    "stroke": null,
+                    "opacity": 0.5
+                },
+                "zIndex": 0
+            },
+            {
+                "type": "text",
+                "name": "Name",
+                "content": "JOHN DOE",
+                "transform": {
+                    "x": 100,
+                    "y": 150,
+                    "width": 500,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 50,
+                    "fontWeight": "800",
+                    "textAlign": "left",
+                    "letterSpacing": 2
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Role",
+                "content": "Creative Director",
+                "transform": {
+                    "x": 100,
+                    "y": 200,
+                    "width": 500,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#3B82F6",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": "500",
+                    "textAlign": "left",
+                    "letterSpacing": 1,
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "shape",
+                "name": "Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 150,
+                    "y": 240,
+                    "width": 100,
+                    "height": 4,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4B5563",
+                    "opacity": 1
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Contact Info",
+                "content": "📞  +1 (555) 123-4567\n✉️  john@company.com\n🌐  www.company.com",
+                "transform": {
+                    "x": 100,
+                    "y": 450,
+                    "width": 400,
+                    "height": 150,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#D1D5DB",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": "400",
+                    "textAlign": "left",
+                    "lineHeight": 2
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "text",
+                "name": "Company Logo",
+                "content": "◈ NEXUS",
+                "transform": {
+                    "x": 880,
+                    "y": 100,
+                    "width": 200,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 30,
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "letterSpacing": 3
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "shape",
+                "name": "QR BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 920,
+                    "y": 480,
+                    "width": 140,
+                    "height": 140,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": null,
+                    "opacity": 1
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "text",
+                "name": "QR Placeholder",
+                "content": "QR",
+                "transform": {
+                    "x": 920,
+                    "y": 480,
+                    "width": 100,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#000000",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 40,
+                    "fontWeight": "bold",
+                    "textAlign": "center"
+                },
+                "zIndex": 19
+            }
+        ]
+    },
+    {
+        "id": "bc-elegant-black",
+        "name": "Simply Elegant Black",
+        "category": "business",
+        "theme": "businesscard",
+        "width": 1050,
+        "height": 600,
+        "thumbnail": "/templates/previews/bc-elegant-black.png",
+        "background": {
+            "type": "solid",
+            "color": "#101010"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Card Border",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 525,
+                    "y": 300,
+                    "width": 1030,
+                    "height": 580,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "transparent",
+                    "stroke": "#C5A059",
+                    "strokeWidth": 2,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Logo Box",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 525,
+                    "y": 150,
+                    "width": 80,
+                    "height": 80,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "transparent",
+                    "stroke": "#C5A059",
+                    "strokeWidth": 3,
+                    "opacity": 1
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Logo Letter",
+                "content": "S",
+                "transform": {
+                    "x": 525,
+                    "y": 153,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 45,
+                    "fontWeight": "400",
+                    "textAlign": "center"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "text",
+                "name": "Brand Name",
+                "content": "SIMPLYFY",
+                "transform": {
+                    "x": 740,
+                    "y": 140,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 32,
+                    "fontWeight": "600",
+                    "textAlign": "left",
+                    "letterSpacing": 2
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Tagline",
+                "content": "SIMPLE IS ELEGANT",
+                "transform": {
+                    "x": 742,
+                    "y": 175,
+                    "width": 300,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#777777",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "textAlign": "left",
+                    "letterSpacing": 4,
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 13
+            },
+            {
+                "type": "text",
+                "name": "Name",
+                "content": "RICHARD STERLING",
+                "transform": {
+                    "x": 80,
+                    "y": 350,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 24,
+                    "fontWeight": "700",
+                    "textAlign": "left",
+                    "letterSpacing": 2,
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Title",
+                "content": "EXECUTIVE DIRECTOR",
+                "transform": {
+                    "x": 80,
+                    "y": 380,
+                    "width": 400,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 0.9
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "textAlign": "left",
+                    "letterSpacing": 3
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Icon Phone",
+                "content": "📞",
+                "transform": {
+                    "x": 90,
+                    "y": 430,
+                    "width": 20,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontSize": 18,
+                    "fontFamily": "Inter"
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "text",
+                "name": "Text Phone 1",
+                "content": "+1 (310) 555-0199",
+                "transform": {
+                    "x": 120,
+                    "y": 430,
+                    "width": 200,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#AAAAAA",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                    "letterSpacing": 0.5
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "text",
+                "name": "Icon Mobile",
+                "content": "📱",
+                "transform": {
+                    "x": 90,
+                    "y": 455,
+                    "width": 20,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontSize": 18,
+                    "fontFamily": "Inter"
+                },
+                "zIndex": 23
+            },
+            {
+                "type": "text",
+                "name": "Text Phone 2",
+                "content": "+1 (310) 555-0188",
+                "transform": {
+                    "x": 120,
+                    "y": 455,
+                    "width": 200,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#AAAAAA",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                    "letterSpacing": 0.5
+                },
+                "zIndex": 23
+            },
+            {
+                "type": "text",
+                "name": "Icon Email",
+                "content": "✉️",
+                "transform": {
+                    "x": 90,
+                    "y": 480,
+                    "width": 20,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontSize": 18,
+                    "fontFamily": "Inter"
+                },
+                "zIndex": 24
+            },
+            {
+                "type": "text",
+                "name": "Text Email",
+                "content": "richard@sterling.luxury",
+                "transform": {
+                    "x": 120,
+                    "y": 480,
+                    "width": 200,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#AAAAAA",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                    "letterSpacing": 0.5
+                },
+                "zIndex": 24
+            },
+            {
+                "type": "text",
+                "name": "Icon Web",
+                "content": "🌐",
+                "transform": {
+                    "x": 90,
+                    "y": 505,
+                    "width": 20,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontSize": 18,
+                    "fontFamily": "Inter"
+                },
+                "zIndex": 25
+            },
+            {
+                "type": "text",
+                "name": "Text Web",
+                "content": "www.sterling.luxury",
+                "transform": {
+                    "x": 120,
+                    "y": 505,
+                    "width": 200,
+                    "height": 20,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "left",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#AAAAAA",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                    "letterSpacing": 0.5
+                },
+                "zIndex": 25
+            },
+            {
+                "type": "text",
+                "name": "Icon Pin",
+                "content": "📍",
+                "transform": {
+                    "x": 850,
+                    "y": 370,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C5A059",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontSize": 24,
+                    "fontFamily": "Inter"
+                },
+                "zIndex": 30
+            },
+            {
+                "type": "text",
+                "name": "Text Address",
+                "content": "123 LUXURY LANE,\nBEVERLY HILLS,\nCA 90210",
+                "transform": {
+                    "x": 850,
+                    "y": 400,
+                    "width": 200,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "top"
+                },
+                "style": {
+                    "fill": "#AAAAAA",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                    "lineHeight": 1.5,
+                    "letterSpacing": 1
+                },
+                "zIndex": 25
+            },
+            {
+                "type": "shape",
+                "name": "Logo Box Inner",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 525,
+                    "y": 150,
+                    "width": 70,
+                    "height": 70,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "transparent",
+                    "stroke": "#C5A059",
+                    "strokeWidth": 1,
+                    "opacity": 1
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "shape",
+                "name": "Divider Line",
+                "shapeType": "line",
+                "transform": {
+                    "x": 525,
+                    "y": 280,
+                    "width": 600,
+                    "height": 1,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#333333",
+                    "stroke": "#333333",
+                    "strokeWidth": 1,
+                    "opacity": 0.5
+                },
+                "zIndex": 5
+            }
+        ]
+    },
+    {
+        "id": "price-list-1",
+        "name": "Price List",
+        "category": "business",
+        "width": 1080,
+        "height": 1350,
+        "thumbnail": "/templates/previews/price-list-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#F5F0E8"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Header BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 100,
+                    "width": 1080,
+                    "height": 200,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "text",
+                "name": "Title",
+                "content": "PRICE LIST",
+                "transform": {
+                    "x": 540,
+                    "y": 80,
+                    "width": 400,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": 42,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "text",
+                "name": "Subtitle",
+                "content": "Luxury Spa & Wellness",
+                "transform": {
+                    "x": 540,
+                    "y": 130,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A962",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 2,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 11
+            },
+            {
+                "type": "shape",
+                "name": "Divider",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 250,
+                    "width": 900,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A962",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Category 1",
+                "content": "MASSAGE THERAPY",
+                "transform": {
+                    "x": 540,
+                    "y": 300,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 12
+            },
+            {
+                "type": "text",
+                "name": "Service 1",
+                "content": "Swedish Massage",
+                "transform": {
+                    "x": 300,
+                    "y": 360,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4A4A4A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 13
+            },
+            {
+                "type": "text",
+                "name": "Price 1",
+                "content": "$85",
+                "transform": {
+                    "x": 780,
+                    "y": 360,
+                    "width": 100,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 14
+            },
+            {
+                "type": "text",
+                "name": "Service 2",
+                "content": "Deep Tissue Massage",
+                "transform": {
+                    "x": 300,
+                    "y": 400,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4A4A4A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "text",
+                "name": "Price 2",
+                "content": "$95",
+                "transform": {
+                    "x": 780,
+                    "y": 400,
+                    "width": 100,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 16
+            },
+            {
+                "type": "text",
+                "name": "Service 3",
+                "content": "Hot Stone Therapy",
+                "transform": {
+                    "x": 300,
+                    "y": 440,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4A4A4A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 17
+            },
+            {
+                "type": "text",
+                "name": "Price 3",
+                "content": "$120",
+                "transform": {
+                    "x": 780,
+                    "y": 440,
+                    "width": 100,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "shape",
+                "name": "Divider 2",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 500,
+                    "width": 900,
+                    "height": 2,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A962",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Category 2",
+                "content": "FACIAL TREATMENTS",
+                "transform": {
+                    "x": 540,
+                    "y": 550,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 3,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 19
+            },
+            {
+                "type": "text",
+                "name": "Service 4",
+                "content": "Classic Facial",
+                "transform": {
+                    "x": 300,
+                    "y": 610,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4A4A4A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Price 4",
+                "content": "$75",
+                "transform": {
+                    "x": 780,
+                    "y": 610,
+                    "width": 100,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "text",
+                "name": "Service 5",
+                "content": "Anti-Aging Treatment",
+                "transform": {
+                    "x": 300,
+                    "y": 650,
+                    "width": 300,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#4A4A4A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "text",
+                "name": "Price 5",
+                "content": "$150",
+                "transform": {
+                    "x": 780,
+                    "y": 650,
+                    "width": 100,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "right",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 23
+            },
+            {
+                "type": "text",
+                "name": "Contact",
+                "content": "Book Now: +1 (555) 123-4567 | www.luxuryspa.com",
+                "transform": {
+                    "x": 540,
+                    "y": 1300,
+                    "width": 600,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#2D4A3E",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Poppins",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.4,
+                    "letterSpacing": 1,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 24
+            },
+            {
+                "type": "shape",
+                "name": "Corner Accent",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 100,
+                    "y": 100,
+                    "width": 60,
+                    "height": 60,
+                    "rotation": 45,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#C9A962",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.8
+                },
+                "zIndex": 2
+            }
+        ],
+        "theme": "pricelist"
+    }
+]

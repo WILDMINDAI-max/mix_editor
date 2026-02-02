@@ -1,0 +1,960 @@
+[
+    {
+        "id": "doctor-profile-1",
+        "name": "Doctor Profile",
+        "category": "healthcare",
+        "width": 1080,
+        "height": 1920,
+        "thumbnail": "/templates/previews/doctor-profile-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#F8FAFC"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Header Gradient",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 280,
+                    "width": 1080,
+                    "height": 560,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Header Accent",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 900,
+                    "y": 100,
+                    "width": 300,
+                    "height": 300,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#14B8A6",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.3
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "text",
+                "name": "Clinic Name",
+                "content": "HEALTHCARE CLINIC",
+                "transform": {
+                    "x": 540,
+                    "y": 60,
+                    "width": 400,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 0.9
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 4,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 10
+            },
+            {
+                "type": "shape",
+                "name": "Photo Circle",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 540,
+                    "y": 350,
+                    "width": 280,
+                    "height": 280,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": "#0D9488",
+                    "strokeWidth": 4,
+                    "opacity": 1
+                },
+                "zIndex": 6
+            },
+            {
+                "type": "shape",
+                "name": "Verified Badge",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 680,
+                    "y": 440,
+                    "width": 50,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "stroke": "#FFFFFF",
+                    "strokeWidth": 3,
+                    "opacity": 1
+                },
+                "zIndex": 7
+            },
+            {
+                "type": "text",
+                "name": "Verified Icon",
+                "content": "✓",
+                "transform": {
+                    "x": 680,
+                    "y": 440,
+                    "width": 30,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 8
+            },
+            {
+                "type": "text",
+                "name": "Name",
+                "content": "Name",
+                "transform": {
+                    "x": 540,
+                    "y": 597,
+                    "width": 500,
+                    "height": 50,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 38,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 20
+            },
+            {
+                "type": "text",
+                "name": "Specialty",
+                "content": "Orthopedic Surgeon",
+                "transform": {
+                    "x": 540,
+                    "y": 630,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": 500,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 21
+            },
+            {
+                "type": "shape",
+                "name": "Stats BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 720,
+                    "width": 900,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": "#E2E8F0",
+                    "strokeWidth": 1,
+                    "opacity": 1
+                },
+                "zIndex": 15
+            },
+            {
+                "type": "text",
+                "name": "Experience Value",
+                "content": "15+",
+                "transform": {
+                    "x": 240,
+                    "y": 705,
+                    "width": 100,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 32,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 16
+            },
+            {
+                "type": "text",
+                "name": "Experience Label",
+                "content": "Years Exp.",
+                "transform": {
+                    "x": 240,
+                    "y": 740,
+                    "width": 120,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 17
+            },
+            {
+                "type": "text",
+                "name": "Patients Value",
+                "content": "5000+",
+                "transform": {
+                    "x": 540,
+                    "y": 705,
+                    "width": 140,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 32,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 18
+            },
+            {
+                "type": "text",
+                "name": "Patients Label",
+                "content": "Patients",
+                "transform": {
+                    "x": 540,
+                    "y": 740,
+                    "width": 120,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 19
+            },
+            {
+                "type": "text",
+                "name": "Rating Value",
+                "content": "4.9",
+                "transform": {
+                    "x": 840,
+                    "y": 705,
+                    "width": 100,
+                    "height": 40,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 32,
+                    "fontWeight": 700,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 22
+            },
+            {
+                "type": "text",
+                "name": "Rating Label",
+                "content": "⭐ Rating",
+                "transform": {
+                    "x": 840,
+                    "y": 740,
+                    "width": 120,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 23
+            },
+            {
+                "type": "text",
+                "name": "About Title",
+                "content": "About",
+                "transform": {
+                    "x": 150,
+                    "y": 830,
+                    "width": 150,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 25
+            },
+            {
+                "type": "text",
+                "name": "About Text",
+                "content": "A board-certified surgeon with over 15 years of experience in joint replacement and sports medicine. Specializing in minimally invasive techniques for faster patient recovery.",
+                "transform": {
+                    "x": 540,
+                    "y": 920,
+                    "width": 920,
+                    "height": 120,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#475569",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.7,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 26
+            },
+            {
+                "type": "text",
+                "name": "Services Title",
+                "content": "Services",
+                "transform": {
+                    "x": 165,
+                    "y": 1020,
+                    "width": 180,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 30
+            },
+            {
+                "type": "shape",
+                "name": "Service Card 1",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 290,
+                    "y": 1120,
+                    "width": 460,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": "#E2E8F0",
+                    "strokeWidth": 1,
+                    "opacity": 1
+                },
+                "zIndex": 31
+            },
+            {
+                "type": "text",
+                "name": "Service 1 Title",
+                "content": "🦴 Joint Replacement",
+                "transform": {
+                    "x": 290,
+                    "y": 1110,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 32
+            },
+            {
+                "type": "text",
+                "name": "Service 1 Desc",
+                "content": "Hip, knee & shoulder replacements",
+                "transform": {
+                    "x": 290,
+                    "y": 1140,
+                    "width": 400,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 33
+            },
+            {
+                "type": "shape",
+                "name": "Service Card 2",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 790,
+                    "y": 1120,
+                    "width": 460,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "stroke": "#E2E8F0",
+                    "strokeWidth": 1,
+                    "opacity": 1
+                },
+                "zIndex": 34
+            },
+            {
+                "type": "text",
+                "name": "Service 2 Title",
+                "content": "⚡ Sports Medicine",
+                "transform": {
+                    "x": 790,
+                    "y": 1110,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 18,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 35
+            },
+            {
+                "type": "text",
+                "name": "Service 2 Desc",
+                "content": "Injury treatment & prevention",
+                "transform": {
+                    "x": 790,
+                    "y": 1140,
+                    "width": 400,
+                    "height": 24,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#64748B",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 14,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 36
+            },
+            {
+                "type": "shape",
+                "name": "CTA BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 1280,
+                    "width": 400,
+                    "height": 60,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 40
+            },
+            {
+                "type": "text",
+                "name": "CTA Text",
+                "content": "Book Appointment",
+                "transform": {
+                    "x": 540,
+                    "y": 1280,
+                    "width": 350,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 20,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 41
+            },
+            {
+                "type": "text",
+                "name": "Contact Title",
+                "content": "Contact",
+                "transform": {
+                    "x": 165,
+                    "y": 1380,
+                    "width": 180,
+                    "height": 35,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0F172A",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 24,
+                    "fontWeight": 600,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 45
+            },
+            {
+                "type": "text",
+                "name": "Phone",
+                "content": "📞 +1 (555) 123-4567",
+                "transform": {
+                    "x": 270,
+                    "y": 1440,
+                    "width": 300,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#475569",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 46
+            },
+            {
+                "type": "text",
+                "name": "Email",
+                "content": "✉️ dr.mitchell@healthcare.com",
+                "transform": {
+                    "x": 300,
+                    "y": 1480,
+                    "width": 360,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#475569",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 47
+            },
+            {
+                "type": "text",
+                "name": "Location",
+                "content": "📍 123 Medical Center, New York, NY",
+                "transform": {
+                    "x": 340,
+                    "y": 1520,
+                    "width": 440,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#475569",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "left",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 48
+            },
+            {
+                "type": "shape",
+                "name": "Footer BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 540,
+                    "y": 1870,
+                    "width": 1080,
+                    "height": 100,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#0D9488",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 50
+            },
+            {
+                "type": "text",
+                "name": "Footer Text",
+                "content": "www.healthcareclinic.com",
+                "transform": {
+                    "x": 540,
+                    "y": 1870,
+                    "width": 400,
+                    "height": 30,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 0.9
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 16,
+                    "fontWeight": 400,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1.2,
+                    "letterSpacing": 1,
+                    "textDecoration": "none",
+                    "textTransform": "none"
+                },
+                "zIndex": 51
+            }
+        ],
+        "theme": "healthcareprofessional"
+    }
+]

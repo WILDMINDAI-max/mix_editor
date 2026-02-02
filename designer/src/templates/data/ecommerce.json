@@ -1,0 +1,182 @@
+[
+    {
+        "id": "cyber-monday-1",
+        "name": "Cyber Monday",
+        "category": "ecommerce",
+        "width": 1920,
+        "height": 1080,
+        "thumbnail": "/templates/previews/cyber-monday-1.png",
+        "background": {
+            "type": "solid",
+            "color": "#09090B"
+        },
+        "elements": [
+            {
+                "type": "shape",
+                "name": "Grid 1",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 960,
+                    "y": 540,
+                    "width": 1800,
+                    "height": 900,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": null,
+                    "stroke": "#22D3EE",
+                    "strokeWidth": 2,
+                    "opacity": 0.2
+                },
+                "zIndex": 1
+            },
+            {
+                "type": "shape",
+                "name": "Circle Glow",
+                "shapeType": "circle",
+                "transform": {
+                    "x": 960,
+                    "y": 540,
+                    "width": 800,
+                    "height": 800,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#22D3EE",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 0.1
+                },
+                "zIndex": 2
+            },
+            {
+                "type": "text",
+                "name": "Title Shadow",
+                "content": "CYBER\nMONDAY",
+                "transform": {
+                    "x": 965,
+                    "y": 485,
+                    "width": 1200,
+                    "height": 500,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#EC4899",
+                    "opacity": 0.8
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 160,
+                    "fontWeight": 900,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 0.9,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 3
+            },
+            {
+                "type": "text",
+                "name": "Title Main",
+                "content": "CYBER\nMONDAY",
+                "transform": {
+                    "x": 986,
+                    "y": 485,
+                    "width": 1200,
+                    "height": 500,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FFFFFF",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 164,
+                    "fontWeight": 900,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 0.9,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 4
+            },
+            {
+                "type": "shape",
+                "name": "Discount BG",
+                "shapeType": "rectangle",
+                "transform": {
+                    "x": 960,
+                    "y": 850,
+                    "width": 700,
+                    "height": 120,
+                    "rotation": -2,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#FACC15",
+                    "stroke": null,
+                    "strokeWidth": 0,
+                    "opacity": 1
+                },
+                "zIndex": 5
+            },
+            {
+                "type": "text",
+                "name": "Discount Text",
+                "content": "UP TO 70% OFF",
+                "transform": {
+                    "x": 960,
+                    "y": 850,
+                    "width": 700,
+                    "height": 80,
+                    "rotation": -2,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "originX": "center",
+                    "originY": "center"
+                },
+                "style": {
+                    "fill": "#000000",
+                    "opacity": 1
+                },
+                "textStyle": {
+                    "fontFamily": "Inter",
+                    "fontSize": 60,
+                    "fontWeight": 800,
+                    "fontStyle": "normal",
+                    "textAlign": "center",
+                    "lineHeight": 1,
+                    "letterSpacing": 0,
+                    "textDecoration": "none",
+                    "textTransform": "uppercase"
+                },
+                "zIndex": 6
+            }
+        ],
+        "theme": "sale"
+    }
+]
