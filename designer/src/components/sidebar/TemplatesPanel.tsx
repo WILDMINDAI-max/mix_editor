@@ -1,37 +1,27 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Layout } from 'lucide-react';
+import { Search, Layout, Loader2 } from 'lucide-react';
 import { useCanvasStore } from '@/store/canvasStore';
 import { useEditorStore } from '@/store/editorStore';
 import { getFabricCanvas } from '@/engine/fabric/FabricCanvas';
 import { CanvasElement, TextElement, ShapeElement, ImageElement } from '@/types/canvas';
-import { PageBackground } from '@/types/project';
 import { loadGoogleFont, GOOGLE_FONTS } from '@/services/googleFonts';
-import { categories, TemplateData, TemplateCategory, TemplateTheme } from '@/templates';
+// Replace static import with hook and types
+import { useTemplatesHierarchy, TemplateData, TemplateCategory, TemplateTheme } from '@/hooks/useTemplates';
 
 export function TemplatesPanel() {
+    const { categories, loading, error } = useTemplatesHierarchy();
     const [searchQuery, setSearchQuery] = useState('');
-    const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['business', 'events', 'festival']));
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
     const addElement = useCanvasStore((state) => state.addElement);
     const updatePage = useEditorStore((state) => state.updatePage);
     const project = useEditorStore((state) => state.project);
 
-    // Toggle category expansion
-    const toggleCategory = (categoryId: string) => {
-        setExpandedCategories(prev => {
-            const next = new Set(prev);
-            if (next.has(categoryId)) {
-                next.delete(categoryId);
-            } else {
-                next.add(categoryId);
-            }
-            return next;
-        });
-    };
-
     // Create a complete element with all required fields
-    const createCompleteElement = (partial: Partial<CanvasElement>, index: number): CanvasElement => {
+    const createCompleteElement = (partial: any, index: number): CanvasElement => {
+        // ... (Keep existing logic, assuming partial matches CanvasElement structure)
         const baseTransform = {
             x: 0,
             y: 0,
@@ -68,7 +58,7 @@ export function TemplatesPanel() {
             style: baseStyle,
         };
 
-        if (partial.type === 'text') {
+        if (partial.type === 'text' || partial.type === 'i-text') {
             const textPartial = partial as Partial<TextElement>;
             return {
                 ...baseElement,
@@ -91,12 +81,15 @@ export function TemplatesPanel() {
             } as TextElement;
         }
 
-        if (partial.type === 'shape') {
+        if (partial.type === 'shape' || partial.type === 'rect' || partial.type === 'circle' || partial.type === 'triangle') {
             const shapePartial = partial as Partial<ShapeElement>;
+            // Map fabric types to our internal types if needed
+            const shapeType = partial.type === 'rect' ? 'rectangle' : partial.type;
+
             return {
                 ...baseElement,
                 type: 'shape',
-                shapeType: shapePartial.shapeType || 'rectangle',
+                shapeType: shapePartial.shapeType || shapeType || 'rectangle',
                 points: shapePartial.points,
             } as ShapeElement;
         }
@@ -153,11 +146,11 @@ export function TemplatesPanel() {
         const usedFonts = new Set<string>();
 
         template.elements.forEach(el => {
-            if (el.type === 'text' && (el as Partial<TextElement>).textStyle?.fontFamily) {
-                const style = (el as Partial<TextElement>).textStyle!;
+            if ((el.type === 'text' || el.type === 'i-text') && el.textStyle?.fontFamily) {
+                const style = el.textStyle;
                 const family = style.fontFamily;
 
-                // Create a unique key for font+weight to avoid duplicate requests
+                // Create a unique key for font+weight
                 const weight = style.fontWeight || 'normal';
                 const weightStr = typeof weight === 'number' ? String(weight) : (weight === 'bold' ? '700' : '400');
                 const key = `${family}:${weightStr}`;
@@ -179,6 +172,7 @@ export function TemplatesPanel() {
         }
 
         // Create complete elements from template - sort by zIndex
+        // Ensure keys are mapped if coming from Fabric object structure (e.g., camelCase)
         const completeElements = template.elements
             .map((el, idx) => createCompleteElement(el, idx))
             .sort((a, b) => a.zIndex - b.zIndex);
@@ -211,11 +205,9 @@ export function TemplatesPanel() {
         }, 100);
     };
 
-    // State for selected category
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
     // Filter categories and themes based on search and selection
     const filterCategories = (): TemplateCategory[] => {
+        if (!categories) return [];
         let filtered = categories;
 
         // 1. Filter by Category Selection
@@ -231,8 +223,7 @@ export function TemplatesPanel() {
                     const filteredThemes = category.themes
                         .map(theme => {
                             const filteredTemplates = theme.templates.filter(t =>
-                                t.name.toLowerCase().includes(lowerQuery) ||
-                                t.tags?.some(tag => tag.toLowerCase().includes(lowerQuery))
+                                t.name.toLowerCase().includes(lowerQuery)
                             );
                             return { ...theme, templates: filteredTemplates };
                         })
@@ -257,12 +248,9 @@ export function TemplatesPanel() {
     // Render theme section
     const renderTheme = (theme: TemplateTheme) => (
         <div key={theme.id} className="mb-6">
-            {/* Theme Name */}
             <h4 className="text-gray-900 font-semibold text-sm mb-3">
                 {theme.name}
             </h4>
-
-            {/* Templates Grid or Empty State */}
             {theme.templates.length > 0 ? (
                 <div className="grid grid-cols-2 gap-3">
                     {theme.templates.map((template) => (
@@ -271,7 +259,6 @@ export function TemplatesPanel() {
                             onClick={() => loadTemplate(template)}
                             className="aspect-[4/5] rounded-xl overflow-hidden border border-gray-200 hover:border-violet-500 hover:shadow-md cursor-pointer transition-all duration-200 group bg-white"
                         >
-                            {/* Template Preview */}
                             <div className="w-full h-[80%] flex flex-col overflow-hidden relative bg-gray-50">
                                 {template.thumbnail ? (
                                     <img
@@ -279,7 +266,6 @@ export function TemplatesPanel() {
                                         alt={template.name}
                                         className="w-full h-full object-contain p-2"
                                         onError={(e) => {
-                                            // Fallback if image fails to load
                                             (e.target as HTMLImageElement).style.display = 'none';
                                             ((e.target as HTMLImageElement).nextSibling as HTMLElement).style.display = 'flex';
                                         }}
@@ -289,13 +275,12 @@ export function TemplatesPanel() {
                                     className="w-full h-full flex items-center justify-center absolute inset-0 -z-10"
                                     style={{
                                         display: template.thumbnail ? 'none' : 'flex',
-                                        backgroundColor: template.background.type === 'solid' ? template.background.color : '#f8f9fa'
+                                        backgroundColor: (template.background && template.background.type === 'solid') ? template.background.color : '#f8f9fa'
                                     }}
                                 >
                                     <span className="text-gray-300 text-2xl font-bold opacity-20">{template.name.charAt(0)}</span>
                                 </div>
                             </div>
-                            {/* Template name */}
                             <div className="w-full h-[20%] flex items-center justify-start px-3 bg-white relative z-10 border-t border-gray-50">
                                 <span className="text-gray-700 text-[10px] font-medium truncate w-full group-hover:text-violet-600 transition-colors">
                                     {template.name}
@@ -304,31 +289,40 @@ export function TemplatesPanel() {
                         </div>
                     ))}
                 </div>
-            ) : (
-                <div className="bg-gray-50 rounded-lg p-6 text-center border border-dashed border-gray-200">
-                    <span className="text-gray-400 text-xs">Templates coming soon</span>
-                </div>
-            )}
+            ) : null}
         </div>
     );
 
     // Render category content
-    const renderCategoryContent = (category: TemplateCategory) => {
-        // For "All" view, we show Category Header. For specific category view, we might skip it or keep it.
-        // Let's keep it clean: just show themes.
+    const renderCategoryContent = (category: TemplateCategory) => (
+        <div key={category.id} className="mb-8">
+            {selectedCategory === 'all' && (
+                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
+                    {category.name}
+                </h3>
+            )}
+            <div className="space-y-6">
+                {category.themes.map(theme => renderTheme(theme))}
+            </div>
+        </div>
+    );
+
+    if (loading) {
         return (
-            <div key={category.id} className="mb-8">
-                {selectedCategory === 'all' && (
-                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
-                        {category.name}
-                    </h3>
-                )}
-                <div className="space-y-6">
-                    {category.themes.map(theme => renderTheme(theme))}
-                </div>
+            <div className="h-full flex items-center justify-center flex-col gap-2 text-gray-400">
+                <Loader2 className="animate-spin" size={24} />
+                <span className="text-xs">Loading templates...</span>
             </div>
         );
-    };
+    }
+
+    if (error) {
+        return (
+            <div className="h-full flex items-center justify-center text-red-400 text-sm">
+                Failed to load templates
+            </div>
+        );
+    }
 
     return (
         <div className="h-full flex flex-col bg-white">
