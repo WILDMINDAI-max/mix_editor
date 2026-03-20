@@ -48,15 +48,15 @@ export function useTemplatesHierarchy() {
                         .filter(t => t.categoryId === cat.id)
                         .map(theme => {
                             const themeTemplates = templates
-                                .filter(tmpl => tmpl.themeId === theme.id)
+                                .filter(tmpl => (tmpl as any).themeId === theme.id)
                                 .map(tmpl => ({
                                     ...tmpl,
                                     // Map backend fields to frontend expected fields
-                                    width: tmpl.metadata?.width || tmpl.width || 1080,
-                                    height: tmpl.metadata?.height || tmpl.height || 1080,
-                                    thumbnail: tmpl.thumbnailUrl || tmpl.thumbnail,
-                                    elements: tmpl.data.objects || tmpl.data.elements || [], // Fabric JSON struct
-                                    background: tmpl.data.background || tmpl.background
+                                    width: (tmpl as any).metadata?.width || (tmpl as any).width || 1080,
+                                    height: (tmpl as any).metadata?.height || (tmpl as any).height || 1080,
+                                    thumbnail: (tmpl as any).thumbnailUrl || (tmpl as any).thumbnail,
+                                    elements: (tmpl as any).data?.objects || (tmpl as any).data?.elements || [], // Fabric JSON struct
+                                    background: (tmpl as any).data?.background || (tmpl as any).background
                                 }));
 
                             return {

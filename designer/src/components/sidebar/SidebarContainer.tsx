@@ -22,6 +22,7 @@ import { LayersPanel } from './LayersPanel';
 import { AnimationsPanel } from './AnimationsPanel';
 import { LibraryPanel } from './LibraryPanel';
 import { MaskPanel } from './MaskPanel';
+import { ProfileAvatar } from './ProfileAvatar';
 
 interface SidebarTab {
     id: SidebarPanel;
@@ -102,6 +103,8 @@ export function SidebarContainer() {
                         );
                     })}
                 </div>
+                {/* Profile Avatar injected at the bottom */}
+                <ProfileAvatar />
             </div>
 
             {/* Panel Content with Close Button */}
