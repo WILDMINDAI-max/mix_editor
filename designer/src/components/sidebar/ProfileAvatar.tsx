@@ -13,8 +13,22 @@ export function ProfileAvatar() {
 
     if (!user) return null;
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
+        try {
+            // Call WildMind main app logout endpoint to clear HTTP-only session cookie
+            await fetch('http://localhost:3000/api/auth/logout', {
+                method: 'POST',
+                credentials: 'include',
+            });
+        } catch (e) {
+            console.warn('[Logout] Failed to call logout API, clearing locally anyway', e);
+        }
+        // Clear editor-side localStorage tokens
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
+        // Clear local Zustand auth state
         logout();
+        // Redirect to landing page
         window.location.href = 'http://localhost:3000/view/Landingpage?toast=LOGOUT_SUCCESS';
     };
 

@@ -2,7 +2,7 @@
   "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc": {
     "id": "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc",
     "createdAt": 1774255348946,
-    "updatedAt": 1774255453285,
+    "updatedAt": 1774256437510,
     "data": {
       "id": "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc",
       "name": "one",
@@ -26,8 +26,8 @@
               "selectable": true,
               "zIndex": 1,
               "transform": {
-                "x": 540,
-                "y": 540,
+                "x": 617.3619095802575,
+                "y": 541.4925372378962,
                 "width": 800,
                 "height": 800,
                 "scaleX": 1,
@@ -57,8 +57,8 @@
               "selectable": true,
               "zIndex": 2,
               "transform": {
-                "x": 840,
-                "y": 84.32837671544333,
+                "x": 917.3619095802575,
+                "y": 85.82091395333947,
                 "width": 800,
                 "height": 225.99999999999997,
                 "scaleX": 1,
@@ -106,8 +106,8 @@
               "selectable": true,
               "zIndex": 3,
               "transform": {
-                "x": 335.5224156557685,
-                "y": 981.3432668129452,
+                "x": 412.884325236026,
+                "y": 982.8358040508414,
                 "width": 600,
                 "height": 99.44,
                 "scaleX": 1,
@@ -144,15 +144,109 @@
                 "type": "none",
                 "shapeType": "none"
               }
+            },
+            {
+              "id": "c2fb78ed-6a1d-42d7-95f3-f72037f30ead",
+              "type": "text",
+              "name": "Text",
+              "content": "AUTUMN",
+              "transform": {
+                "x": 484.52610661210707,
+                "y": 325.2238778021575,
+                "width": 800,
+                "height": 99.44,
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0,
+                "skewX": 0,
+                "skewY": 0,
+                "originX": "center",
+                "originY": "center"
+              },
+              "style": {
+                "fill": "#fcd34d",
+                "stroke": null,
+                "strokeWidth": 0,
+                "opacity": 1,
+                "shadow": null,
+                "cornerRadius": 0
+              },
+              "textStyle": {
+                "fontFamily": "Alfa Slab One",
+                "fontSize": 88,
+                "fontWeight": 400,
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "textAlign": "center",
+                "lineHeight": 1,
+                "letterSpacing": 4,
+                "textTransform": "none"
+              },
+              "effect": {
+                "type": "none"
+              },
+              "locked": false,
+              "visible": true,
+              "selectable": true,
+              "editable": true,
+              "zIndex": 4,
+              "blendMode": "normal"
+            },
+            {
+              "id": "f82dcd21-cf37-424a-9cc2-298a5e607cbe",
+              "type": "text",
+              "name": "Text",
+              "content": "feels",
+              "transform": {
+                "x": 365.12313765197194,
+                "y": 444.4119363705999,
+                "width": 800,
+                "height": 108.47999999999999,
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0,
+                "skewX": 0,
+                "skewY": 0,
+                "originX": "center",
+                "originY": "center"
+              },
+              "style": {
+                "fill": "#fef3c7",
+                "stroke": null,
+                "strokeWidth": 0,
+                "opacity": 1,
+                "shadow": null,
+                "cornerRadius": 0
+              },
+              "textStyle": {
+                "fontFamily": "Sacramento",
+                "fontSize": 96,
+                "fontWeight": 400,
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "textAlign": "center",
+                "lineHeight": 1,
+                "letterSpacing": 0,
+                "textTransform": "none"
+              },
+              "effect": {
+                "type": "none"
+              },
+              "locked": false,
+              "visible": true,
+              "selectable": true,
+              "editable": true,
+              "zIndex": 5,
+              "blendMode": "normal"
             }
           ],
           "createdAt": 1774255348946,
-          "updatedAt": 1774255444411
+          "updatedAt": 1774255870274
         }
       ],
       "activePageId": "6d82175d-a7be-4551-8fb9-e5596bb70e25",
       "createdAt": 1774255348946,
-      "updatedAt": 1774255444411,
+      "updatedAt": 1774255870274,
       "version": "1.0.0"
     }
   }
