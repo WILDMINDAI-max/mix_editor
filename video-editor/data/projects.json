@@ -1,0 +1,82 @@
+{
+  "25e52b06-86c1-4091-ab7c-002b8faca8e0": {
+    "id": "25e52b06-86c1-4091-ab7c-002b8faca8e0",
+    "createdAt": 1774255075690,
+    "updatedAt": 1774255436322,
+    "data": {
+      "name": "hii",
+      "dimension": {
+        "name": "YouTube Video",
+        "width": 1920,
+        "height": 1080
+      },
+      "currentTime": 0,
+      "tracks": [
+        {
+          "id": "main-video",
+          "type": "video",
+          "name": "Main Video",
+          "items": []
+        },
+        {
+          "id": "audio-track-1",
+          "type": "audio",
+          "name": "Audio 1",
+          "items": []
+        },
+        {
+          "id": "overlay-track-1",
+          "type": "overlay",
+          "name": "Overlay Track 1",
+          "items": []
+        },
+        {
+          "id": "track-1774255423651",
+          "type": "overlay",
+          "name": "Text",
+          "items": [
+            {
+              "id": "1774255423651",
+              "type": "text",
+              "src": "",
+              "name": "ELITE",
+              "start": 0,
+              "duration": 5,
+              "offset": 0,
+              "trackId": "track-1774255423651",
+              "layer": 1,
+              "thumbnail": "",
+              "transition": {
+                "type": "none",
+                "duration": 0.5
+              },
+              "isLocked": false,
+              "isBackground": false,
+              "x": 20.03507825148408,
+              "y": -43.38909875876956,
+              "width": 60,
+              "height": 30,
+              "fontSize": 60,
+              "fontWeight": "bold",
+              "fontFamily": "\"Playfair Display\", serif",
+              "color": "#d4af37",
+              "textAlign": "center",
+              "fontStyle": "normal",
+              "textDecoration": "none",
+              "textTransform": "none",
+              "listType": "none",
+              "fit": "cover",
+              "textEffect": {
+                "type": "shadow",
+                "color": "#000000",
+                "intensity": 40,
+                "offset": 10
+              }
+            }
+          ]
+        }
+      ],
+      "uploads": []
+    }
+  }
+}

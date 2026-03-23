@@ -5,6 +5,7 @@ import {
     Image, Video, Sparkles, Music, Library
 } from 'lucide-react';
 import { Tab } from '@/types';
+import { ProfileAvatar } from './ProfileAvatar';
 
 interface SidebarProps {
     activeTab: Tab;
@@ -22,8 +23,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     ];
 
     return (
-        <div className="w-[72px] bg-[#0e1318] text-gray-400 flex flex-col h-full z-30 shrink-0 overflow-y-auto custom-scrollbar">
-            <div className="flex flex-col py-2">
+        <div className="w-[72px] bg-[#0e1318] text-gray-400 flex flex-col h-full z-30 shrink-0">
+            <div className="flex flex-col py-2 overflow-y-auto custom-scrollbar">
                 {tools.map((tool) => {
                     const isActive = activeTab === tool.id;
                     return (
@@ -44,7 +45,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
             </div>
 
             <div className="flex-1 min-h-[20px]"></div>
-
+            
+            <ProfileAvatar />
         </div>
     );
 };

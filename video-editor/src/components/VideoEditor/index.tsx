@@ -18,9 +18,11 @@ import { ProjectManager, LoadProjectResult } from '@/core/project/ProjectManager
 import { ProjectUpload } from '@/core/project/ProjectTypes';
 import '@/app/animations.css';
 
-interface VideoEditorProps { }
+interface VideoEditorProps {
+    projectId?: string;
+}
 
-const VideoEditor: React.FC<VideoEditorProps> = () => {
+const VideoEditor: React.FC<VideoEditorProps> = ({ projectId }) => {
     // --- Font Loading ---
     useEffect(() => {
         const linkId = 'video-editor-fonts';
@@ -134,6 +136,66 @@ const VideoEditor: React.FC<VideoEditorProps> = () => {
             items: []
         }
     ]);
+
+    const [isSaving, setIsSaving] = useState(false);
+    const [isLoadingProject, setIsLoadingProject] = useState(!!projectId);
+
+    // Initial load
+    useEffect(() => {
+        if (!projectId) return;
+        
+        const loadProject = async () => {
+            try {
+                const res = await fetch(`/api/projects/${projectId}`);
+                if (res.ok) {
+                    const { project } = await res.json();
+                    if (project && project.data) {
+                        setProjectName(project.data.name || 'Untitled Video Design');
+                        if (project.data.dimension) setCurrentDimension(project.data.dimension);
+                        if (project.data.tracks) setTracks(project.data.tracks);
+                        if (project.data.uploads) setUploads(project.data.uploads);
+                        // Optional: setCurrentTime
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to load project", err);
+            } finally {
+                setIsLoadingProject(false);
+            }
+        };
+
+        loadProject();
+    }, [projectId]);
+
+    // Auto-save debounced effect
+    useEffect(() => {
+        if (!projectId || isLoadingProject) return;
+
+        const timeoutId = setTimeout(async () => {
+            setIsSaving(true);
+            try {
+                await fetch(`/api/projects/${projectId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        data: {
+                            name: projectName,
+                            dimension: currentDimension,
+                            currentTime,
+                            tracks,
+                            uploads
+                        }
+                    })
+                });
+            } catch (err) {
+                console.error("Failed to auto-save", err);
+            } finally {
+                setIsSaving(false);
+            }
+        }, 1500); // 1.5 seconds debounce
+
+        return () => clearTimeout(timeoutId);
+    }, [projectId, isLoadingProject, projectName, currentDimension, tracks, uploads]);
 
     const addToHistory = () => {
         setPast(prev => [...prev, tracks]);

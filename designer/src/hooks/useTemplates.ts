@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { templateApi } from '../services/api/templates';
+import { Template } from '../types/template';
 
 // Define types that match what the UI expects (hierarchical)
 export interface TemplateData {
@@ -33,47 +33,59 @@ export function useTemplatesHierarchy() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch flat data from backend
-                const [cats, themes, templates] = await Promise.all([
-                    (await import('../services/api/client')).apiClient.get('/templates/categories').then(r => r.data), // Direct axios usage or update api service
-                    (await import('../services/api/client')).apiClient.get('/templates/themes').then(r => r.data),
-                    templateApi.getTemplates({ limit: 1000 })
-                ]);
+                // Fetch our internal templates
+                const response = await fetch('/api/templates');
+                if (!response.ok) throw new Error('Failed to fetch templates');
+                
+                const data = await response.json();
+                const templates: Template[] = data.templates || [];
 
-                // Backend 'getTemplates' returns array directly based on our api service impl
+                // Group templates into hierarchy: Category -> Subcategory(Theme) -> Template
+                const categoryMap: Record<string, Record<string, TemplateData[]>> = {};
 
-                // Stitch into hierarchy
-                const hierarchy: TemplateCategory[] = (cats as any[]).map(cat => {
-                    const catThemes = (themes as any[])
-                        .filter(t => t.categoryId === cat.id)
-                        .map(theme => {
-                            const themeTemplates = templates
-                                .filter(tmpl => (tmpl as any).themeId === theme.id)
-                                .map(tmpl => ({
-                                    ...tmpl,
-                                    // Map backend fields to frontend expected fields
-                                    width: (tmpl as any).metadata?.width || (tmpl as any).width || 1080,
-                                    height: (tmpl as any).metadata?.height || (tmpl as any).height || 1080,
-                                    thumbnail: (tmpl as any).thumbnailUrl || (tmpl as any).thumbnail,
-                                    elements: (tmpl as any).data?.objects || (tmpl as any).data?.elements || [], // Fabric JSON struct
-                                    background: (tmpl as any).data?.background || (tmpl as any).background
-                                }));
+                templates.forEach(t => {
+                    const catId = t.info.category || 'general';
+                    const themeId = t.info.subcategory || 'standard';
+                    const page = t.pages[0]; // Assuming primarily single page templates for now
 
-                            return {
-                                id: theme.id,
-                                name: theme.name,
-                                templates: themeTemplates
-                            };
-                        });
+                    // Map to expected UI format
+                    const tmplData: TemplateData = {
+                        id: t.info.id,
+                        name: t.info.name,
+                        thumbnail: t.info.thumbnail,
+                        width: page?.width || 1080,
+                        height: page?.height || 1080,
+                        background: page?.background || { type: 'solid', color: '#ffffff' },
+                        elements: page?.elements || [],
+                    };
+
+                    if (!categoryMap[catId]) categoryMap[catId] = {};
+                    if (!categoryMap[catId][themeId]) categoryMap[catId][themeId] = [];
+                    
+                    categoryMap[catId][themeId].push(tmplData);
+                });
+
+                // Convert map to Array format expected by UI
+                const hierarchy: TemplateCategory[] = Object.keys(categoryMap).map(catId => {
+                    // Make nice names from IDs
+                    const catName = catId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    
+                    const themes = Object.keys(categoryMap[catId]).map(themeId => {
+                        const themeName = themeId.charAt(0).toUpperCase() + themeId.slice(1);
+                        return {
+                            id: themeId,
+                            name: themeName,
+                            templates: categoryMap[catId][themeId]
+                        };
+                    });
 
                     return {
-                        id: cat.id,
-                        name: cat.name,
-                        themes: catThemes
+                        id: catId,
+                        name: catName,
+                        themes
                     };
                 });
 
-                // Filter out empty categories or themes if desired, but for now keep them
                 setCategories(hierarchy);
 
             } catch (err) {

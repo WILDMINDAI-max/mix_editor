@@ -23,7 +23,7 @@ import { FilterPanel } from '@/components/sidebar/FilterPanel';
 import { getFabricCanvas } from '@/engine/fabric/FabricCanvas';
 import { ChevronRight, ChevronLeft, ChevronUp, ChevronDown, FileText, AlertCircle, MoreHorizontal, Plus, Copy, ClipboardPaste, CopyPlus, Trash2, Eye, EyeOff, Lock, LockOpen } from 'lucide-react';
 
-export function EditorShell() {
+export function EditorShell({ projectId }: { projectId?: string }) {
     const createNewProject = useEditorStore((state) => state.createNewProject);
     const project = useEditorStore((state) => state.project);
     const pushState = useHistoryStore((state) => state.pushState);
@@ -84,10 +84,46 @@ export function EditorShell() {
 
     // Initialize with a new project if none exists
     useEffect(() => {
-        if (!project) {
+        if (!project && !projectId) {
             createNewProject();
         }
-    }, [project, createNewProject]);
+    }, [project, createNewProject, projectId]);
+
+    // Load project from API when projectId is provided
+    useEffect(() => {
+        if (!projectId) return;
+        const loadFromApi = async () => {
+            try {
+                const res = await fetch(`/api/projects/${projectId}`);
+                if (res.ok) {
+                    const { project: stored } = await res.json();
+                    if (stored?.data) {
+                        useEditorStore.getState().loadProject(stored.data);
+                    }
+                }
+            } catch (err) {
+                console.error('[EditorShell] Failed to load project', err);
+            }
+        };
+        loadFromApi();
+    }, [projectId]);
+
+    // Debounced autosave whenever project changes
+    useEffect(() => {
+        if (!projectId || !project) return;
+        const timeoutId = setTimeout(async () => {
+            try {
+                await fetch(`/api/projects/${projectId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data: project })
+                });
+            } catch (err) {
+                console.error('[EditorShell] Autosave failed', err);
+            }
+        }, 2000);
+        return () => clearTimeout(timeoutId);
+    }, [projectId, project]);
 
     // Push initial state when project is loaded
     useEffect(() => {

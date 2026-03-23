@@ -1,0 +1,159 @@
+{
+  "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc": {
+    "id": "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc",
+    "createdAt": 1774255348946,
+    "updatedAt": 1774255453285,
+    "data": {
+      "id": "f4399abf-f5db-46c1-9f10-a3bc7ecd4edc",
+      "name": "one",
+      "pages": [
+        {
+          "id": "6d82175d-a7be-4551-8fb9-e5596bb70e25",
+          "name": "Untitled Page",
+          "width": 1080,
+          "height": 1080,
+          "dpi": 72,
+          "background": {
+            "type": "solid",
+            "color": "#111111"
+          },
+          "elements": [
+            {
+              "id": "dc36d696-d244-4d5d-a1f3-10776b2b6ee8",
+              "name": "Deco Shape",
+              "locked": false,
+              "visible": true,
+              "selectable": true,
+              "zIndex": 1,
+              "transform": {
+                "x": 540,
+                "y": 540,
+                "width": 800,
+                "height": 800,
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0,
+                "skewX": 0,
+                "skewY": 0,
+                "originX": "center",
+                "originY": "center"
+              },
+              "style": {
+                "fill": "#FF0055",
+                "stroke": null,
+                "strokeWidth": 0,
+                "opacity": 0.2,
+                "shadow": null,
+                "cornerRadius": 0
+              },
+              "type": "shape",
+              "shapeType": "circle"
+            },
+            {
+              "id": "6e649223-e556-4bfd-9e8d-ae5d08a36f42",
+              "name": "Title Text",
+              "locked": false,
+              "visible": true,
+              "selectable": true,
+              "zIndex": 2,
+              "transform": {
+                "x": 840,
+                "y": 84.32837671544333,
+                "width": 800,
+                "height": 225.99999999999997,
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0,
+                "skewX": 0,
+                "skewY": 0,
+                "originX": "center",
+                "originY": "center"
+              },
+              "style": {
+                "fill": "#FFFFFF",
+                "stroke": null,
+                "strokeWidth": 0,
+                "opacity": 1,
+                "shadow": null,
+                "cornerRadius": 0
+              },
+              "type": "text",
+              "content": "SALE",
+              "editable": true,
+              "textStyle": {
+                "fontFamily": "Inter",
+                "fontSize": 200,
+                "fontWeight": "bold",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "textAlign": "center",
+                "lineHeight": 1,
+                "letterSpacing": -2,
+                "textTransform": "uppercase"
+              },
+              "effect": {
+                "type": "neon",
+                "shapeType": "none",
+                "neonColor": "#FF0055",
+                "neonIntensity": 50
+              }
+            },
+            {
+              "id": "8d0a3887-8ea6-46bc-aebc-8d8eb7f9409d",
+              "name": "Subtitle Box",
+              "locked": false,
+              "visible": true,
+              "selectable": true,
+              "zIndex": 3,
+              "transform": {
+                "x": 335.5224156557685,
+                "y": 981.3432668129452,
+                "width": 600,
+                "height": 99.44,
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0,
+                "skewX": 0,
+                "skewY": 0,
+                "originX": "center",
+                "originY": "center"
+              },
+              "style": {
+                "fill": "#FFAA00",
+                "stroke": null,
+                "strokeWidth": 0,
+                "opacity": 1,
+                "shadow": null,
+                "cornerRadius": 0
+              },
+              "type": "text",
+              "content": "UP TO 50% OFF ENTIRE STORE",
+              "editable": true,
+              "textStyle": {
+                "fontFamily": "Inter",
+                "fontSize": 40,
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "textAlign": "center",
+                "lineHeight": 1.2,
+                "letterSpacing": 2,
+                "textTransform": "uppercase"
+              },
+              "effect": {
+                "type": "none",
+                "shapeType": "none"
+              }
+            }
+          ],
+          "createdAt": 1774255348946,
+          "updatedAt": 1774255444411
+        }
+      ],
+      "activePageId": "6d82175d-a7be-4551-8fb9-e5596bb70e25",
+      "createdAt": 1774255348946,
+      "updatedAt": 1774255444411,
+      "version": "1.0.0"
+    }
+  }
+}
